@@ -1,0 +1,51 @@
+name: Update Polymarket Data
+
+on:
+  schedule:
+    # Run every 10 minutes
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+  push:
+    branches: [main]
+    paths:
+      - 'data/tier1_traders.csv'
+      - 'config.json'
+      - 'scripts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch Polymarket data
+        run: node scripts/fetch_data.js
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if git diff --quiet docs/data/; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/data/
+          git commit -m "Update Polymarket data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push

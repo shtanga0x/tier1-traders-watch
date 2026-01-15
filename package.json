@@ -1,0 +1,14 @@
+{
+  "name": "tier1-traders-watch",
+  "version": "1.0.0",
+  "description": "Polymarket Tier1 Traders Dashboard",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch_data.js",
+    "test-api": "node scripts/test_api.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

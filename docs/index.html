@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tier1 Traders Watch | Polymarket</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Tier1 Traders Watch</h1>
+      <p class="subtitle">Tracking top Polymarket traders</p>
+      <div id="last-updated" class="last-updated" title="Click to refresh">
+        <span class="status-dot"></span>
+        <span class="timestamp">Loading...</span>
+        <button id="refresh-btn" class="refresh-btn" title="Refresh data">&#8635;</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-section="traders">Traders</button>
+    <button class="tab" data-section="portfolio">Portfolio</button>
+    <button class="tab" data-section="changes">Recent Changes</button>
+  </nav>
+
+  <main>
+    <!-- Section 1: Traders List -->
+    <section id="traders-section" class="section active">
+      <div class="section-header">
+        <h2>Tier1 Traders</h2>
+        <div class="search-box">
+          <input type="text" id="trader-search" placeholder="Search traders...">
+        </div>
+      </div>
+      <div class="table-container">
+        <table id="traders-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Trader</th>
+              <th>Portfolio Value</th>
+              <th>All Time PnL</th>
+              <th>Positions</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="traders-tbody">
+            <tr><td colspan="7" class="loading">Loading traders...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Aggregated Portfolio -->
+    <section id="portfolio-section" class="section">
+      <div class="section-header">
+        <h2>Aggregated Portfolio</h2>
+      </div>
+
+      <div class="summary-cards" id="portfolio-summary">
+        <div class="card">
+          <div class="card-label">Total Exposure</div>
+          <div class="card-value" id="total-exposure">$0</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Distinct Markets</div>
+          <div class="card-value" id="distinct-markets">0</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Top 1 Concentration</div>
+          <div class="card-value" id="top1-share">0%</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Top 5 Concentration</div>
+          <div class="card-value" id="top5-share">0%</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Net Flow 24h</div>
+          <div class="card-value" id="net-flow-24h">$0</div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="portfolio-table">
+          <thead id="portfolio-thead">
+            <tr>
+              <th class="sortable">Market</th>
+              <th>Side</th>
+              <th>Avg Entry</th>
+              <th class="sortable">Traders</th>
+              <th class="sortable">Exposure</th>
+              <th class="sortable">24h Change</th>
+            </tr>
+          </thead>
+          <tbody id="portfolio-tbody">
+            <tr><td colspan="6" class="loading">Loading portfolio...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Recent Changes -->
+    <section id="changes-section" class="section">
+      <div class="section-header">
+        <h2>Recent Portfolio Changes</h2>
+        <div class="filters">
+          <select id="delta-filter">
+            <option value="0">All changes</option>
+            <option value="1000">>$1,000 change</option>
+            <option value="10000">>$10,000 change</option>
+          </select>
+          <select id="time-filter">
+            <option value="all">All time</option>
+            <option value="1h">Last 1h</option>
+            <option value="6h">Last 6h</option>
+            <option value="24h">Last 24h</option>
+            <option value="7d">Last 7d</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="summary-cards" id="changes-summary">
+        <div class="card">
+          <div class="card-label">1h Flow</div>
+          <div class="card-value" id="flow-1h">$0</div>
+        </div>
+        <div class="card">
+          <div class="card-label">6h Flow</div>
+          <div class="card-value" id="flow-6h">$0</div>
+        </div>
+        <div class="card">
+          <div class="card-label">24h Flow</div>
+          <div class="card-value" id="flow-24h">$0</div>
+        </div>
+        <div class="card">
+          <div class="card-label">7d Flow</div>
+          <div class="card-value" id="flow-7d">$0</div>
+        </div>
+        <div class="card">
+          <div class="card-label">30d Flow</div>
+          <div class="card-value" id="flow-30d">$0</div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="changes-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Trader</th>
+              <th>Market</th>
+              <th>Side</th>
+              <th>Action</th>
+              <th>Delta</th>
+              <th>Size</th>
+            </tr>
+          </thead>
+          <tbody id="changes-tbody">
+            <tr><td colspan="7" class="loading">Loading changes...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data refreshes every 10 minutes via GitHub Actions</p>
+    <p><a href="https://github.com" target="_blank">View on GitHub</a></p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "poll_interval_seconds": 300,
+  "max_recent_events": 2000,
+  "min_usd_filter": 50,
+  "concurrency_limit": 5,
+  "retry_attempts": 3,
+  "retry_base_delay_ms": 1000,
+  "activity_limit_per_trader": 500
+}
