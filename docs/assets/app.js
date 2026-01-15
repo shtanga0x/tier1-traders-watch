@@ -385,12 +385,31 @@ function renderChangesSummary() {
 }
 
 /**
+ * Get trader's average entry price for a specific position
+ */
+function getTraderAvgEntry(traderAddress, conditionId, outcomeIndex) {
+  if (!traderPortfolios) return null;
+
+  const trader = traderPortfolios[traderAddress?.toLowerCase()];
+  if (!trader?.positions) return null;
+
+  const position = trader.positions.find(p =>
+    p.conditionId === conditionId &&
+    (p.outcomeIndex === outcomeIndex ||
+     (p.outcome === 'Yes' && outcomeIndex === 1) ||
+     (p.outcome === 'No' && outcomeIndex === 0))
+  );
+
+  return position?.avgPrice || null;
+}
+
+/**
  * Render changes table
  */
 function renderChangesTable(deltaFilter = 0, timeFilter = 'all') {
   const tbody = document.getElementById('changes-tbody');
   if (!recentChanges?.changes) {
-    tbody.innerHTML = '<tr><td colspan="7" class="loading">Loading...</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="loading">Loading...</td></tr>';
     return;
   }
 
@@ -410,7 +429,7 @@ function renderChangesTable(deltaFilter = 0, timeFilter = 'all') {
   });
 
   if (changes.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" class="loading">No changes match filters</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="loading">No changes match filters</td></tr>';
     return;
   }
 
@@ -422,6 +441,14 @@ function renderChangesTable(deltaFilter = 0, timeFilter = 'all') {
     const actionClass = c.action === 'increased' ? 'action-increased' : 'action-decreased';
     const outcomeClass = c.outcome === 'Yes' ? 'outcome-yes' : 'outcome-no';
 
+    // Get trader's average entry for this position
+    const avgEntry = getTraderAvgEntry(c.traderAddress, c.conditionId, c.outcomeIndex);
+    const avgEntryDisplay = avgEntry ? formatCents(avgEntry) : '-';
+
+    // Format delta with trade price in brackets
+    const tradePrice = c.price ? formatCents(c.price) : '';
+    const deltaDisplay = `${c.delta >= 0 ? '+' : ''}${formatUSD(c.delta)}${tradePrice ? ` (${tradePrice})` : ''}`;
+
     return `
       <tr>
         <td>${formatRelativeTime(c.timestamp)}</td>
@@ -432,8 +459,9 @@ function renderChangesTable(deltaFilter = 0, timeFilter = 'all') {
           <a href="${marketUrl}" target="_blank" class="market-link">${c.market}</a>
         </td>
         <td><span class="${outcomeClass}">${c.outcome || '-'}</span></td>
+        <td>${avgEntryDisplay}</td>
         <td class="${actionClass}">${c.action}</td>
-        <td class="${c.delta >= 0 ? 'positive' : 'negative'}">${c.delta >= 0 ? '+' : ''}${formatUSD(c.delta)}</td>
+        <td class="${c.delta >= 0 ? 'positive' : 'negative'}">${deltaDisplay}</td>
         <td>${formatUSD(Math.abs(c.size))}</td>
       </tr>
     `;
