@@ -10,6 +10,8 @@ import {
   fetchWalletActivity,
   fetchWalletValue,
   fetchUsdcBalance,
+  fetchAllActivity,
+  calculatePnLFromActivity,
   fetchProfitLeaderboard,
   batchFetch
 } from './polymarket_api.js';
@@ -116,32 +118,30 @@ export async function fetchAllPortfolios(traders, config) {
     config
   );
 
-  // Fetch profit leaderboard for accurate all-time PnL
-  console.log('Fetching profit leaderboard...');
-  const profitMap = await fetchProfitLeaderboard(5000, config);
+  // Fetch all activity history for accurate PnL calculation
+  console.log('Fetching activity history for PnL calculation...');
+  const activityResults = await batchFetch(
+    traders.map(t => t.address),
+    (address, cfg) => fetchAllActivity(address, cfg),
+    Math.min(concurrency, 3), // Lower concurrency for activity fetching
+    config
+  );
 
-  // Build trader portfolios with PnL and USDC balance
+  // Build trader portfolios with accurate PnL
   for (const trader of traders) {
     const addr = trader.address.toLowerCase();
     const posResult = positionsResults.get(addr);
     const valResult = valuesResults.get(addr);
     const usdcResult = usdcResults.get(addr);
+    const activityResult = activityResults.get(addr);
+
     const positions = posResult?.success ? posResult.data : [];
     const totalValue = valResult?.success ? valResult.data : 0;
     const usdcBalance = usdcResult?.success ? usdcResult.data : 0;
+    const activity = activityResult?.success ? activityResult.data : [];
 
-    // Get PnL from leaderboard (accurate all-time profit)
-    const leaderboardPnL = profitMap.get(addr);
-    let totalPnL = 0;
-    if (leaderboardPnL !== undefined) {
-      totalPnL = leaderboardPnL;
-    } else {
-      // Fallback: calculate from open positions if not in leaderboard
-      for (const pos of positions) {
-        const pnl = parseFloat(pos.cashPnl || pos.pnl || 0);
-        totalPnL += pnl;
-      }
-    }
+    // Calculate PnL from activity history + current positions
+    const pnlData = calculatePnLFromActivity(activity, positions);
 
     traderPortfolios[addr] = {
       address: addr,
@@ -150,7 +150,9 @@ export async function fetchAllPortfolios(traders, config) {
       positions: positions,
       totalValue: totalValue,
       usdcBalance: usdcBalance,
-      totalPnL: Math.round(totalPnL * 100) / 100,
+      totalPnL: pnlData.totalPnL,
+      unrealizedPnL: pnlData.unrealizedPnL,
+      realizedPnL: pnlData.realizedPnL,
       fetchSuccess: posResult?.success && valResult?.success,
       lastUpdated: new Date().toISOString()
     };
@@ -160,9 +162,9 @@ export async function fetchAllPortfolios(traders, config) {
 }
 
 /**
- * Fetch recent activity for all traders
+ * Fetch recent activity for all traders (for changes display)
  */
-export async function fetchAllActivity(traders, config) {
+export async function fetchRecentActivity(traders, config) {
   console.log(`Fetching activity for ${traders.length} traders...`);
 
   const allActivity = [];
@@ -496,7 +498,7 @@ export async function computeAll() {
 
   // Fetch all data
   const traderPortfolios = await fetchAllPortfolios(traders, config);
-  const activity = await fetchAllActivity(traders, config);
+  const activity = await fetchRecentActivity(traders, config);
 
   // Aggregate - pass activity for 24h change calculation
   const aggregatedPortfolio = aggregatePortfolios(traderPortfolios, config, activity);
@@ -527,7 +529,7 @@ export default {
   loadTraders,
   loadConfig,
   fetchAllPortfolios,
-  fetchAllActivity,
+  fetchRecentActivity,
   aggregatePortfolios,
   processRecentChanges,
   computeAll

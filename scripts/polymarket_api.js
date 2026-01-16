@@ -215,6 +215,96 @@ export async function batchFetch(addresses, fetchFn, concurrency = 5, config = {
 }
 
 /**
+ * Fetch all activity history for a wallet with pagination
+ * @param {string} address - Wallet address
+ * @param {object} config - Config object
+ * @returns {Promise<Array>} All activity objects
+ */
+export async function fetchAllActivity(address, config = {}) {
+  const allActivity = [];
+  let endTimestamp = Math.floor(Date.now() / 1000);
+  const maxIterations = config.activity_max_pages || 30;
+
+  for (let i = 0; i < maxIterations; i++) {
+    const url = `${DATA_API_BASE}/activity?user=${address.toLowerCase()}&limit=1000&end=${endTimestamp}`;
+
+    try {
+      const data = await fetchWithRetry(url, {}, config);
+      if (!data || data.length === 0) break;
+
+      allActivity.push(...data);
+
+      // Get oldest timestamp for next page
+      const timestamps = data.map(a => a.timestamp).filter(t => t && t > 0);
+      if (timestamps.length === 0) break;
+
+      const oldest = Math.min(...timestamps);
+      if (oldest >= endTimestamp) break;
+
+      endTimestamp = oldest - 1;
+
+      if (data.length < 1000) break; // Last page
+    } catch (error) {
+      console.warn(`Failed to fetch activity page ${i + 1}: ${error.message}`);
+      break;
+    }
+  }
+
+  return allActivity;
+}
+
+/**
+ * Calculate PnL from activity history and current positions
+ * @param {Array} activity - All activity events
+ * @param {Array} positions - Current open positions
+ * @returns {object} PnL breakdown
+ */
+export function calculatePnLFromActivity(activity, positions) {
+  let totalBuys = 0;
+  let totalSells = 0;
+  let totalRedemptions = 0;
+  let totalYieldsRewards = 0;
+
+  activity.forEach(a => {
+    const type = a.type || 'TRADE';
+    const usdc = parseFloat(a.usdcSize || a.size || 0);
+
+    if (type === 'TRADE') {
+      if (a.side === 'BUY') totalBuys += usdc;
+      else if (a.side === 'SELL') totalSells += usdc;
+    } else if (type === 'REDEEM') {
+      totalRedemptions += usdc;
+    } else if (type === 'YIELD' || type === 'REWARD') {
+      totalYieldsRewards += usdc;
+    }
+  });
+
+  // Current position value
+  let currentValue = 0;
+  let unrealizedPnL = 0;
+  positions.forEach(p => {
+    currentValue += parseFloat(p.currentValue || 0);
+    unrealizedPnL += parseFloat(p.cashPnl || 0);
+  });
+
+  // Total PnL = Money Out - Money In
+  const moneyOut = totalSells + totalRedemptions + totalYieldsRewards + currentValue;
+  const moneyIn = totalBuys;
+  const totalPnL = moneyOut - moneyIn;
+
+  return {
+    totalPnL: Math.round(totalPnL * 100) / 100,
+    unrealizedPnL: Math.round(unrealizedPnL * 100) / 100,
+    realizedPnL: Math.round((totalPnL - unrealizedPnL) * 100) / 100,
+    totalBuys,
+    totalSells,
+    totalRedemptions,
+    totalYieldsRewards,
+    currentValue
+  };
+}
+
+/**
  * Fetch profit leaderboard (contains all-time PnL)
  * @param {number} limit - Max results (default 5000)
  * @param {object} config - Config object
@@ -248,6 +338,8 @@ export default {
   fetchWalletValue,
   fetchWalletTrades,
   fetchUsdcBalance,
+  fetchAllActivity,
+  calculatePnLFromActivity,
   fetchProfitLeaderboard,
   batchFetch
 };
