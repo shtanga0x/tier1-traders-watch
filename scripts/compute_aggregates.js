@@ -9,6 +9,7 @@ import {
   fetchWalletPositions,
   fetchWalletActivity,
   fetchWalletValue,
+  fetchUsdcBalance,
   batchFetch
 } from './polymarket_api.js';
 
@@ -105,27 +106,31 @@ export async function fetchAllPortfolios(traders, config) {
     config
   );
 
+  // Fetch USDC balances from Polygon blockchain
+  console.log('Fetching USDC balances from Polygon...');
+  const usdcResults = await batchFetch(
+    traders.map(t => t.address),
+    fetchUsdcBalance,
+    concurrency,
+    config
+  );
+
   // Build trader portfolios with PnL and USDC balance
   for (const trader of traders) {
     const addr = trader.address.toLowerCase();
     const posResult = positionsResults.get(addr);
     const valResult = valuesResults.get(addr);
+    const usdcResult = usdcResults.get(addr);
     const positions = posResult?.success ? posResult.data : [];
     const totalValue = valResult?.success ? valResult.data : 0;
+    const usdcBalance = usdcResult?.success ? usdcResult.data : 0;
 
-    // Calculate total PnL and position value sum
+    // Calculate total PnL from positions
     let totalPnL = 0;
-    let positionValueSum = 0;
     for (const pos of positions) {
       const pnl = parseFloat(pos.cashPnl || pos.pnl || 0);
       totalPnL += pnl;
-      // Sum position values for USDC balance calculation
-      const posValue = parseFloat(pos.currentValue || 0);
-      positionValueSum += posValue;
     }
-
-    // USDC balance = total value - sum of position values
-    const usdcBalance = Math.max(0, totalValue - positionValueSum);
 
     traderPortfolios[addr] = {
       address: addr,
@@ -133,7 +138,7 @@ export async function fetchAllPortfolios(traders, config) {
       tier: trader.tier || '1',
       positions: positions,
       totalValue: totalValue,
-      usdcBalance: Math.round(usdcBalance * 100) / 100,
+      usdcBalance: usdcBalance,
       totalPnL: Math.round(totalPnL * 100) / 100,
       fetchSuccess: posResult?.success && valResult?.success,
       lastUpdated: new Date().toISOString()
@@ -324,6 +329,14 @@ export function aggregatePortfolios(traderPortfolios, config, activity = []) {
   const totalExposure = positions.reduce((sum, p) => sum + p.totalExposure, 0);
   const distinctMarkets = new Set(positions.map(p => p.conditionId)).size;
 
+  // Calculate total capital (sum of all traders' portfolio values)
+  const totalCapital = Object.values(traderPortfolios)
+    .filter(p => p.fetchSuccess)
+    .reduce((sum, p) => sum + (p.totalValue || 0), 0);
+
+  // Relative exposure = total exposure / total capital
+  const relativeExposure = totalCapital > 0 ? (totalExposure / totalCapital) * 100 : 0;
+
   // Concentration metrics
   let top1Share = 0;
   let top5Share = 0;
@@ -336,6 +349,8 @@ export function aggregatePortfolios(traderPortfolios, config, activity = []) {
     positions: positions.filter(p => p.totalExposure >= (config.min_usd_filter || 0)),
     summary: {
       totalExposure,
+      totalCapital: Math.round(totalCapital * 100) / 100,
+      relativeExposure: Math.round(relativeExposure * 100) / 100,
       distinctMarkets,
       top1Share: Math.round(top1Share * 100) / 100,
       top5Share: Math.round(top5Share * 100) / 100,

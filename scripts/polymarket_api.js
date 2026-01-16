@@ -3,6 +3,11 @@
  */
 
 const DATA_API_BASE = 'https://data-api.polymarket.com';
+const POLYGON_RPC = 'https://polygon-rpc.com';
+
+// USDC contracts on Polygon
+const USDC_NATIVE = '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359'; // Native USDC
+const USDC_BRIDGED = '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174'; // USDC.e
 
 /**
  * Sleep helper
@@ -123,6 +128,50 @@ export async function fetchWalletTrades(address, limit = 500, config = {}) {
 }
 
 /**
+ * Fetch USDC balance from Polygon blockchain
+ * @param {string} address - Wallet address
+ * @param {object} config - Config object
+ * @returns {Promise<number>} USDC balance in USD
+ */
+export async function fetchUsdcBalance(address, config = {}) {
+  const addr = address.toLowerCase().replace('0x', '');
+  // balanceOf(address) function selector = 0x70a08231
+  const data = '0x70a08231000000000000000000000000' + addr;
+
+  async function getBalance(tokenContract) {
+    try {
+      const response = await fetch(POLYGON_RPC, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          jsonrpc: '2.0',
+          method: 'eth_call',
+          params: [{ to: tokenContract, data }, 'latest'],
+          id: 1
+        })
+      });
+      const result = await response.json();
+      if (result.result && result.result !== '0x') {
+        // USDC has 6 decimals
+        return parseInt(result.result, 16) / 1e6;
+      }
+      return 0;
+    } catch (error) {
+      console.warn(`Failed to fetch USDC balance from ${tokenContract}: ${error.message}`);
+      return 0;
+    }
+  }
+
+  // Fetch both native USDC and bridged USDC.e
+  const [nativeBalance, bridgedBalance] = await Promise.all([
+    getBalance(USDC_NATIVE),
+    getBalance(USDC_BRIDGED)
+  ]);
+
+  return Math.round((nativeBalance + bridgedBalance) * 100) / 100;
+}
+
+/**
  * Batch fetch with concurrency limit
  * @param {Array<string>} addresses - Array of wallet addresses
  * @param {Function} fetchFn - Function to call for each address
@@ -170,5 +219,6 @@ export default {
   fetchWalletActivity,
   fetchWalletValue,
   fetchWalletTrades,
+  fetchUsdcBalance,
   batchFetch
 };

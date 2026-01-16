@@ -185,6 +185,7 @@ function renderPortfolioSummary() {
 
   const s = aggregatedPortfolio.summary;
   document.getElementById('total-exposure').textContent = formatUSD(s.totalExposure);
+  document.getElementById('relative-exposure').textContent = s.relativeExposure.toFixed(1) + '%';
   document.getElementById('distinct-markets').textContent = s.distinctMarkets;
   document.getElementById('top1-share').textContent = (s.top1Share * 100).toFixed(1) + '%';
   document.getElementById('top5-share').textContent = (s.top5Share * 100).toFixed(1) + '%';
