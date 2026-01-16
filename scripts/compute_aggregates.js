@@ -15,6 +15,7 @@ import {
   fetchProfitLeaderboard,
   batchFetch
 } from './polymarket_api.js';
+import { scrapeProfilePnL } from './scrape_profile.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -118,30 +119,50 @@ export async function fetchAllPortfolios(traders, config) {
     config
   );
 
-  // Fetch all activity history for accurate PnL calculation
-  console.log('Fetching activity history for PnL calculation...');
-  const activityResults = await batchFetch(
-    traders.map(t => t.address),
-    (address, cfg) => fetchAllActivity(address, cfg),
-    Math.min(concurrency, 3), // Lower concurrency for activity fetching
-    config
-  );
+  // Scrape profile pages for accurate PnL (directly from Polymarket)
+  console.log('Scraping profile pages for accurate PnL...');
+  const pnlMap = new Map();
+  for (const trader of traders) {
+    const identifier = trader.label || trader.address;
+    try {
+      const pnlData = await scrapeProfilePnL(identifier);
+      if (pnlData) {
+        pnlMap.set(trader.address.toLowerCase(), pnlData);
+      } else if (identifier !== trader.address) {
+        // Fallback: try with address
+        const pnlByAddr = await scrapeProfilePnL(trader.address);
+        if (pnlByAddr) {
+          pnlMap.set(trader.address.toLowerCase(), pnlByAddr);
+        }
+      }
+    } catch (e) {
+      console.warn(`Failed to scrape ${identifier}: ${e.message}`);
+    }
+    // Rate limit to avoid being blocked
+    await new Promise(r => setTimeout(r, 500));
+  }
 
-  // Build trader portfolios with accurate PnL
+  // Build trader portfolios with scraped PnL
   for (const trader of traders) {
     const addr = trader.address.toLowerCase();
     const posResult = positionsResults.get(addr);
     const valResult = valuesResults.get(addr);
     const usdcResult = usdcResults.get(addr);
-    const activityResult = activityResults.get(addr);
+    const scrapedPnL = pnlMap.get(addr);
 
     const positions = posResult?.success ? posResult.data : [];
     const totalValue = valResult?.success ? valResult.data : 0;
     const usdcBalance = usdcResult?.success ? usdcResult.data : 0;
-    const activity = activityResult?.success ? activityResult.data : [];
 
-    // Calculate PnL from activity history + current positions
-    const pnlData = calculatePnLFromActivity(activity, positions);
+    // Calculate unrealized PnL from positions (for breakdown)
+    let unrealizedPnL = 0;
+    for (const pos of positions) {
+      unrealizedPnL += parseFloat(pos.cashPnl || 0);
+    }
+
+    // Use scraped PnL if available, otherwise use unrealized from positions
+    const totalPnL = scrapedPnL?.pnl ?? unrealizedPnL;
+    const realizedPnL = totalPnL - unrealizedPnL;
 
     traderPortfolios[addr] = {
       address: addr,
@@ -150,10 +171,12 @@ export async function fetchAllPortfolios(traders, config) {
       positions: positions,
       totalValue: totalValue,
       usdcBalance: usdcBalance,
-      totalPnL: pnlData.totalPnL,
-      unrealizedPnL: pnlData.unrealizedPnL,
-      realizedPnL: pnlData.realizedPnL,
+      totalPnL: Math.round(totalPnL * 100) / 100,
+      unrealizedPnL: Math.round(unrealizedPnL * 100) / 100,
+      realizedPnL: Math.round(realizedPnL * 100) / 100,
+      tradingVolume: scrapedPnL?.amount || 0,
       fetchSuccess: posResult?.success && valResult?.success,
+      pnlSource: scrapedPnL ? 'scraped' : 'calculated',
       lastUpdated: new Date().toISOString()
     };
   }
