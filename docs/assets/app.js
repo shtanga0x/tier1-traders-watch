@@ -294,7 +294,7 @@ function renderPortfolioTable() {
   const thead = document.getElementById('portfolio-thead');
 
   if (!aggregatedPortfolio?.positions) {
-    tbody.innerHTML = '<tr><td colspan="6" class="loading">Loading...</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="7" class="loading">Loading...</td></tr>';
     return;
   }
 
@@ -302,6 +302,7 @@ function renderPortfolioTable() {
   if (thead) {
     thead.innerHTML = `
       <tr>
+        <th>#</th>
         <th class="sortable" onclick="handlePortfolioSort('title')">Market${getSortIndicator('title')}</th>
         <th>Side</th>
         <th>Avg Entry</th>
@@ -314,11 +315,11 @@ function renderPortfolioTable() {
 
   const positions = sortPositions(aggregatedPortfolio.positions);
   if (positions.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="6" class="loading">No positions found</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="7" class="loading">No positions found</td></tr>';
     return;
   }
 
-  tbody.innerHTML = positions.map(pos => {
+  tbody.innerHTML = positions.map((pos, idx) => {
     const marketUrl = pos.eventSlug
       ? polymarketUrl('/event/' + pos.eventSlug)
       : polymarketUrl('/market/' + pos.slug);
@@ -346,6 +347,7 @@ function renderPortfolioTable() {
 
     return `
       <tr>
+        <td>${idx + 1}</td>
         <td>
           <div class="market-cell">
             ${pos.icon ? `<img src="${pos.icon}" class="market-icon" alt="">` : '<div class="market-icon"></div>'}

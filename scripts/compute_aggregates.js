@@ -87,11 +87,12 @@ export async function fetchAllPortfolios(traders, config) {
 
   const traderPortfolios = {};
   const concurrency = config.concurrency_limit || 5;
+  const positionsLimit = config.positions_limit_per_trader || 1000;
 
   // Fetch positions for all traders
   const positionsResults = await batchFetch(
     traders.map(t => t.address),
-    fetchWalletPositions,
+    (address, cfg) => fetchWalletPositions(address, positionsLimit, cfg),
     concurrency,
     config
   );

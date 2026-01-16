@@ -63,11 +63,12 @@ async function fetchWithRetry(url, options = {}, config = {}) {
 /**
  * Fetch current positions for a wallet
  * @param {string} address - Wallet address (0x...)
+ * @param {number} limit - Max results (default 1000)
  * @param {object} config - Config object
  * @returns {Promise<Array>} Array of position objects
  */
-export async function fetchWalletPositions(address, config = {}) {
-  const url = `${DATA_API_BASE}/positions?user=${address.toLowerCase()}`;
+export async function fetchWalletPositions(address, limit = 1000, config = {}) {
+  const url = `${DATA_API_BASE}/positions?user=${address.toLowerCase()}&limit=${limit}`;
   const data = await fetchWithRetry(url, {}, config);
   return data || [];
 }
