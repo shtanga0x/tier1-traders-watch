@@ -124,7 +124,7 @@ function updateLastUpdated() {
 function renderTradersTable(searchTerm = '') {
   const tbody = document.getElementById('traders-tbody');
   if (!traderPortfolios) {
-    tbody.innerHTML = '<tr><td colspan="7" class="loading">Loading...</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="loading">Loading...</td></tr>';
     return;
   }
 
@@ -138,7 +138,7 @@ function renderTradersTable(searchTerm = '') {
     .sort((a, b) => (b.totalValue || 0) - (a.totalValue || 0));
 
   if (traders.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" class="loading">No traders found</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="loading">No traders found</td></tr>';
     return;
   }
 
@@ -159,6 +159,7 @@ function renderTradersTable(searchTerm = '') {
           </div>
         </td>
         <td>${formatUSD(trader.totalValue)}</td>
+        <td>${formatUSD(trader.usdcBalance || 0)}</td>
         <td class="${pnlClass}">${pnlSign}${formatUSD(trader.totalPnL || 0)}</td>
         <td>${trader.positions?.length || 0}</td>
         <td>
@@ -294,7 +295,7 @@ function renderPortfolioTable() {
   const thead = document.getElementById('portfolio-thead');
 
   if (!aggregatedPortfolio?.positions) {
-    tbody.innerHTML = '<tr><td colspan="7" class="loading">Loading...</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="loading">Loading...</td></tr>';
     return;
   }
 
@@ -308,6 +309,7 @@ function renderPortfolioTable() {
         <th>Avg Entry</th>
         <th class="sortable" onclick="handlePortfolioSort('traderCount')">Traders${getSortIndicator('traderCount')}</th>
         <th class="sortable" onclick="handlePortfolioSort('totalExposure')">Exposure${getSortIndicator('totalExposure')}</th>
+        <th>% Alloc</th>
         <th class="sortable" onclick="handlePortfolioSort('change24h')">24h Change${getSortIndicator('change24h')}</th>
       </tr>
     `;
@@ -315,9 +317,13 @@ function renderPortfolioTable() {
 
   const positions = sortPositions(aggregatedPortfolio.positions);
   if (positions.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" class="loading">No positions found</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="loading">No positions found</td></tr>';
     return;
   }
+
+  // Calculate total exposure for allocation %
+  const totalExposure = aggregatedPortfolio.summary?.totalExposure ||
+    positions.reduce((sum, p) => sum + (p.totalExposure || 0), 0);
 
   tbody.innerHTML = positions.map((pos, idx) => {
     const marketUrl = pos.eventSlug
@@ -340,6 +346,9 @@ function renderPortfolioTable() {
       `;
     }
 
+    // Calculate allocation %
+    const allocPct = totalExposure > 0 ? (pos.totalExposure / totalExposure) * 100 : 0;
+
     // 24h change with tooltip
     const change24h = pos.change24h || 0;
     const change24hClass = change24h >= 0 ? 'positive' : 'negative';
@@ -358,6 +367,7 @@ function renderPortfolioTable() {
         <td>${entryHtml}</td>
         <td>${pos.traderCount}</td>
         <td>${formatUSD(pos.totalExposure)}</td>
+        <td>${allocPct.toFixed(2)}%</td>
         <td class="tooltip ${change24hClass}">
           ${change24h >= 0 ? '+' : ''}${formatUSD(change24h)}
           ${tooltipContent ? `<span class="tooltip-text">${tooltipContent}</span>` : ''}

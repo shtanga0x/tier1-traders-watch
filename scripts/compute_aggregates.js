@@ -105,26 +105,35 @@ export async function fetchAllPortfolios(traders, config) {
     config
   );
 
-  // Build trader portfolios with PnL
+  // Build trader portfolios with PnL and USDC balance
   for (const trader of traders) {
     const addr = trader.address.toLowerCase();
     const posResult = positionsResults.get(addr);
     const valResult = valuesResults.get(addr);
     const positions = posResult?.success ? posResult.data : [];
+    const totalValue = valResult?.success ? valResult.data : 0;
 
-    // Calculate total PnL from positions (cashPnl is all-time realized + unrealized)
+    // Calculate total PnL and position value sum
     let totalPnL = 0;
+    let positionValueSum = 0;
     for (const pos of positions) {
       const pnl = parseFloat(pos.cashPnl || pos.pnl || 0);
       totalPnL += pnl;
+      // Sum position values for USDC balance calculation
+      const posValue = parseFloat(pos.currentValue || 0);
+      positionValueSum += posValue;
     }
+
+    // USDC balance = total value - sum of position values
+    const usdcBalance = Math.max(0, totalValue - positionValueSum);
 
     traderPortfolios[addr] = {
       address: addr,
       label: trader.label,
       tier: trader.tier || '1',
       positions: positions,
-      totalValue: valResult?.success ? valResult.data : 0,
+      totalValue: totalValue,
+      usdcBalance: Math.round(usdcBalance * 100) / 100,
       totalPnL: Math.round(totalPnL * 100) / 100,
       fetchSuccess: posResult?.success && valResult?.success,
       lastUpdated: new Date().toISOString()
