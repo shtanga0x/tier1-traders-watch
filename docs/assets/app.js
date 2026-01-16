@@ -347,6 +347,15 @@ function renderPortfolioTable() {
       `;
     }
 
+    // Format trader count with change indicator
+    const traderChange = pos.traderCountChange || 0;
+    let traderCountHtml = `${pos.traderCount}`;
+    if (traderChange !== 0) {
+      const changeClass = traderChange > 0 ? 'positive' : 'negative';
+      const changeSign = traderChange > 0 ? '+' : '';
+      traderCountHtml = `${pos.traderCount} <span class="${changeClass}">(${changeSign}${traderChange})</span>`;
+    }
+
     // Calculate allocation %
     const allocPct = totalExposure > 0 ? (pos.totalExposure / totalExposure) * 100 : 0;
 
@@ -366,7 +375,7 @@ function renderPortfolioTable() {
         </td>
         <td><span class="${outcomeClass}">${pos.outcome || '-'}</span></td>
         <td>${entryHtml}</td>
-        <td>${pos.traderCount}</td>
+        <td>${traderCountHtml}</td>
         <td>${formatUSD(pos.totalExposure)}</td>
         <td>${allocPct.toFixed(2)}%</td>
         <td class="tooltip ${change24hClass}">

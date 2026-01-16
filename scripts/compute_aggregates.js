@@ -10,6 +10,7 @@ import {
   fetchWalletActivity,
   fetchWalletValue,
   fetchUsdcBalance,
+  fetchProfitLeaderboard,
   batchFetch
 } from './polymarket_api.js';
 
@@ -115,6 +116,10 @@ export async function fetchAllPortfolios(traders, config) {
     config
   );
 
+  // Fetch profit leaderboard for accurate all-time PnL
+  console.log('Fetching profit leaderboard...');
+  const profitMap = await fetchProfitLeaderboard(5000, config);
+
   // Build trader portfolios with PnL and USDC balance
   for (const trader of traders) {
     const addr = trader.address.toLowerCase();
@@ -125,11 +130,17 @@ export async function fetchAllPortfolios(traders, config) {
     const totalValue = valResult?.success ? valResult.data : 0;
     const usdcBalance = usdcResult?.success ? usdcResult.data : 0;
 
-    // Calculate total PnL from positions
+    // Get PnL from leaderboard (accurate all-time profit)
+    const leaderboardPnL = profitMap.get(addr);
     let totalPnL = 0;
-    for (const pos of positions) {
-      const pnl = parseFloat(pos.cashPnl || pos.pnl || 0);
-      totalPnL += pnl;
+    if (leaderboardPnL !== undefined) {
+      totalPnL = leaderboardPnL;
+    } else {
+      // Fallback: calculate from open positions if not in leaderboard
+      for (const pos of positions) {
+        const pnl = parseFloat(pos.cashPnl || pos.pnl || 0);
+        totalPnL += pnl;
+      }
     }
 
     traderPortfolios[addr] = {
@@ -217,9 +228,36 @@ function build24hChangeMap(activity) {
 }
 
 /**
+ * Load previous aggregated portfolio for comparison
+ */
+function loadPreviousPortfolio() {
+  const prevPath = path.join(ROOT_DIR, 'docs', 'data', 'aggregated_portfolio.json');
+  try {
+    if (fs.existsSync(prevPath)) {
+      const data = JSON.parse(fs.readFileSync(prevPath, 'utf-8'));
+      // Build map of position key -> trader count
+      const traderCountMap = new Map();
+      if (data.positions) {
+        for (const pos of data.positions) {
+          const key = `${pos.conditionId}-${pos.outcomeIndex}`;
+          traderCountMap.set(key, pos.traderCount || 0);
+        }
+      }
+      return traderCountMap;
+    }
+  } catch (e) {
+    console.warn('Could not load previous portfolio:', e.message);
+  }
+  return new Map();
+}
+
+/**
  * Aggregate positions across all traders
  */
 export function aggregatePortfolios(traderPortfolios, config, activity = []) {
+  // Load previous trader counts for comparison
+  const prevTraderCounts = loadPreviousPortfolio();
+
   // Build 24h change map from activity
   const change24hMap = build24hChangeMap(activity);
 
@@ -304,6 +342,11 @@ export function aggregatePortfolios(traderPortfolios, config, activity = []) {
       priceChangePct = ((curPrice - avgEntry) / avgEntry) * 100;
     }
 
+    // Calculate trader count change vs previous snapshot
+    const currentTraderCount = agg.traders.length;
+    const prevTraderCount = prevTraderCounts.get(key) || 0;
+    const traderCountChange = prevTraderCount > 0 ? currentTraderCount - prevTraderCount : 0;
+
     return {
       conditionId: agg.conditionId,
       title: agg.title,
@@ -312,7 +355,8 @@ export function aggregatePortfolios(traderPortfolios, config, activity = []) {
       eventSlug: agg.eventSlug,
       outcome: agg.outcome,
       outcomeIndex: agg.outcomeIndex,
-      traderCount: agg.traders.length,
+      traderCount: currentTraderCount,
+      traderCountChange: traderCountChange,
       traders: agg.traders,
       totalExposure: agg.totalExposure,
       change24h: Math.round((change24hMap.get(key) || 0) * 100) / 100,
@@ -329,12 +373,15 @@ export function aggregatePortfolios(traderPortfolios, config, activity = []) {
   const totalExposure = positions.reduce((sum, p) => sum + p.totalExposure, 0);
   const distinctMarkets = new Set(positions.map(p => p.conditionId)).size;
 
-  // Calculate total capital (sum of all traders' portfolio values)
-  const totalCapital = Object.values(traderPortfolios)
+  // Calculate total USDC balance across all traders
+  const totalUsdcBalance = Object.values(traderPortfolios)
     .filter(p => p.fetchSuccess)
-    .reduce((sum, p) => sum + (p.totalValue || 0), 0);
+    .reduce((sum, p) => sum + (p.usdcBalance || 0), 0);
 
-  // Relative exposure = total exposure / total capital
+  // Total capital = exposure + USDC balance
+  const totalCapital = totalExposure + totalUsdcBalance;
+
+  // Relative exposure = exposure / (exposure + USDC) × 100
   const relativeExposure = totalCapital > 0 ? (totalExposure / totalCapital) * 100 : 0;
 
   // Concentration metrics

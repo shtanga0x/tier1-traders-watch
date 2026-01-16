@@ -214,11 +214,40 @@ export async function batchFetch(addresses, fetchFn, concurrency = 5, config = {
   return results;
 }
 
+/**
+ * Fetch profit leaderboard (contains all-time PnL)
+ * @param {number} limit - Max results (default 5000)
+ * @param {object} config - Config object
+ * @returns {Promise<Map>} Map of address -> profit amount
+ */
+export async function fetchProfitLeaderboard(limit = 5000, config = {}) {
+  const url = `https://lb-api.polymarket.com/profit?window=all&limit=${limit}`;
+  try {
+    const response = await fetch(url, {
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!response.ok) {
+      console.warn(`Failed to fetch leaderboard: ${response.status}`);
+      return new Map();
+    }
+    const data = await response.json();
+    const profitMap = new Map();
+    for (const user of data) {
+      profitMap.set(user.proxyWallet.toLowerCase(), user.amount);
+    }
+    return profitMap;
+  } catch (error) {
+    console.warn(`Failed to fetch leaderboard: ${error.message}`);
+    return new Map();
+  }
+}
+
 export default {
   fetchWalletPositions,
   fetchWalletActivity,
   fetchWalletValue,
   fetchWalletTrades,
   fetchUsdcBalance,
+  fetchProfitLeaderboard,
   batchFetch
 };
