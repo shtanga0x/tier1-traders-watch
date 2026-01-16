@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "timestamp": 1768526378,
+      "trader": "JJo",
+      "traderAddress": "0xc4086b708cd3a50880b7069add1a1a80000f4675",
+      "market": "Khamenei out as Supreme Leader of Iran by January 31?",
+      "marketSlug": "khamenei-out-as-supreme-leader-of-iran-by-january-31",
+      "eventSlug": "khamenei-out-as-supreme-leader-of-iran-by-january-31",
+      "conditionId": "0xa8b744720006da3c08b4dc8a61a5ce930542f550fcf8d27380ae898de636799d",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 90,
+      "size": 100,
+      "price": 0.9
+    },
+    {
       "timestamp": 1768526372,
       "trader": "ImJustKen",
       "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
@@ -8432,21 +8447,6 @@
     },
     {
       "timestamp": 1768518302,
-      "trader": "LlamaEnjoyer",
-      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
-      "market": "Will FC Barcelona win on 2026-01-15?",
-      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
-      "eventSlug": "cdr-rrc-fcb-2026-01-15",
-      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 1018.98,
-      "size": 1020,
-      "price": 0.999
-    },
-    {
-      "timestamp": 1768518302,
       "trader": "archaic",
       "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
       "market": "Will the Iranian regime fall before 2027?",
@@ -8459,6 +8459,21 @@
       "delta": -13.9,
       "size": 21.72,
       "price": 0.64
+    },
+    {
+      "timestamp": 1768518302,
+      "trader": "LlamaEnjoyer",
+      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
+      "market": "Will FC Barcelona win on 2026-01-15?",
+      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
+      "eventSlug": "cdr-rrc-fcb-2026-01-15",
+      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 1018.98,
+      "size": 1020,
+      "price": 0.999
     },
     {
       "timestamp": 1768518262,
@@ -8582,21 +8597,6 @@
     },
     {
       "timestamp": 1768518188,
-      "trader": "LlamaEnjoyer",
-      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
-      "market": "Will FC Barcelona win on 2026-01-15?",
-      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
-      "eventSlug": "cdr-rrc-fcb-2026-01-15",
-      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 246.66,
-      "size": 246.91,
-      "price": 0.999
-    },
-    {
-      "timestamp": 1768518188,
       "trader": "archaic",
       "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
       "market": "Will the Iranian regime fall before 2027?",
@@ -8624,6 +8624,21 @@
       "delta": -2.52,
       "size": 2.66949,
       "price": 0.9439997902221023
+    },
+    {
+      "timestamp": 1768518188,
+      "trader": "LlamaEnjoyer",
+      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
+      "market": "Will FC Barcelona win on 2026-01-15?",
+      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
+      "eventSlug": "cdr-rrc-fcb-2026-01-15",
+      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 246.66,
+      "size": 246.91,
+      "price": 0.999
     },
     {
       "timestamp": 1768518176,
@@ -8972,21 +8987,6 @@
     },
     {
       "timestamp": 1768517922,
-      "trader": "LlamaEnjoyer",
-      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
-      "market": "Will AC Milan win on 2026-01-15?",
-      "marketSlug": "sea-com-mil-2026-01-15-mil",
-      "eventSlug": "sea-com-mil-2026-01-15",
-      "conditionId": "0x2c14d7425f93f6bb20fa16b404ecd29cf1d5c8d8d6c3337518d960c53e44d82d",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 1858.14,
-      "size": 1860,
-      "price": 0.999
-    },
-    {
-      "timestamp": 1768517922,
       "trader": "dontshowmyname",
       "traderAddress": "0x0c97325a81ad05c6b58ae30d12eaaec1b8451b68",
       "market": "Will Trump say \"Olympic\" during Panthers visit?",
@@ -9014,6 +9014,21 @@
       "delta": 2,
       "size": 2000,
       "price": 0.001
+    },
+    {
+      "timestamp": 1768517922,
+      "trader": "LlamaEnjoyer",
+      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
+      "market": "Will AC Milan win on 2026-01-15?",
+      "marketSlug": "sea-com-mil-2026-01-15-mil",
+      "eventSlug": "sea-com-mil-2026-01-15",
+      "conditionId": "0x2c14d7425f93f6bb20fa16b404ecd29cf1d5c8d8d6c3337518d960c53e44d82d",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 1858.14,
+      "size": 1860,
+      "price": 0.999
     },
     {
       "timestamp": 1768517914,
@@ -10202,21 +10217,6 @@
     },
     {
       "timestamp": 1768517096,
-      "trader": "LlamaEnjoyer",
-      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
-      "market": "Will FC Barcelona win on 2026-01-15?",
-      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
-      "eventSlug": "cdr-rrc-fcb-2026-01-15",
-      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 63.63,
-      "size": 63.69,
-      "price": 0.999
-    },
-    {
-      "timestamp": 1768517096,
       "trader": "archaic",
       "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
       "market": "US strikes Iran by March 31, 2026?",
@@ -10229,6 +10229,21 @@
       "delta": -1.96,
       "size": 3.84,
       "price": 0.51
+    },
+    {
+      "timestamp": 1768517096,
+      "trader": "LlamaEnjoyer",
+      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
+      "market": "Will FC Barcelona win on 2026-01-15?",
+      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
+      "eventSlug": "cdr-rrc-fcb-2026-01-15",
+      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 63.63,
+      "size": 63.69,
+      "price": 0.999
     },
     {
       "timestamp": 1768517046,
@@ -10952,21 +10967,6 @@
     },
     {
       "timestamp": 1768516620,
-      "trader": "LlamaEnjoyer",
-      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
-      "market": "Will FC Barcelona win on 2026-01-15?",
-      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
-      "eventSlug": "cdr-rrc-fcb-2026-01-15",
-      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 298.7,
-      "size": 299,
-      "price": 0.999
-    },
-    {
-      "timestamp": 1768516620,
       "trader": "archaic",
       "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
       "market": "US strikes Iran by March 31, 2026?",
@@ -10979,6 +10979,21 @@
       "delta": -43.33,
       "size": 84.97,
       "price": 0.51
+    },
+    {
+      "timestamp": 1768516620,
+      "trader": "LlamaEnjoyer",
+      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
+      "market": "Will FC Barcelona win on 2026-01-15?",
+      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
+      "eventSlug": "cdr-rrc-fcb-2026-01-15",
+      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 298.7,
+      "size": 299,
+      "price": 0.999
     },
     {
       "timestamp": 1768516614,
@@ -20372,21 +20387,6 @@
     },
     {
       "timestamp": 1768511890,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Epstein blackmail evidence released by March 31?",
-      "marketSlug": "epstein-blackmail-evidence-released-by-march-31",
-      "eventSlug": "epstein-blackmail-files-released-in-2025",
-      "conditionId": "0x862a23e2ad5445d1079e3252217dfe8aaf15288ee7cafa8f9906088176f136af",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "decreased",
-      "delta": -161,
-      "size": 500,
-      "price": 0.322
-    },
-    {
-      "timestamp": 1768511890,
       "trader": "25usdc",
       "traderAddress": "0x75e765216a57942d738d880ffcda854d9f869080",
       "market": "Epstein blackmail evidence released by March 31?",
@@ -20399,6 +20399,21 @@
       "delta": -269.44,
       "size": 778.73786,
       "price": 0.34599999928088765
+    },
+    {
+      "timestamp": 1768511890,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Epstein blackmail evidence released by March 31?",
+      "marketSlug": "epstein-blackmail-evidence-released-by-march-31",
+      "eventSlug": "epstein-blackmail-files-released-in-2025",
+      "conditionId": "0x862a23e2ad5445d1079e3252217dfe8aaf15288ee7cafa8f9906088176f136af",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": -161,
+      "size": 500,
+      "price": 0.322
     },
     {
       "timestamp": 1768511890,
@@ -28964,28 +28979,13 @@
       "delta": 36.45,
       "size": 81,
       "price": 0.45
-    },
-    {
-      "timestamp": 1768503138,
-      "trader": "ImJustKen",
-      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
-      "market": "US strikes Iran by January 15, 2026?",
-      "marketSlug": "us-strikes-iran-by-january-15-2026-652-612",
-      "eventSlug": "us-strikes-iran-by",
-      "conditionId": "0x2d4d7f2eea43913d65c93351621a733f66ec079e111c278b34e8cc9e06ebe751",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "decreased",
-      "delta": -11.35,
-      "size": 391.24,
-      "price": 0.029
     }
   ],
   "windowSummaries": {
-    "1h": 25367.56,
-    "6h": 151666.74,
-    "24h": 249046.6,
-    "7d": 249046.6,
-    "30d": 249046.6
+    "1h": 25457.56,
+    "6h": 151756.74,
+    "24h": 249147.95,
+    "7d": 249147.95,
+    "30d": 249147.95
   }
 }
