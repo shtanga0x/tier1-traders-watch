@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     # Allow manual trigger
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - 'data/tier1_traders.csv'
       - 'config.json'
