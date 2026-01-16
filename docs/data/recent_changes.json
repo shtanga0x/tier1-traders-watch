@@ -1,6 +1,51 @@
 {
   "changes": [
     {
+      "timestamp": 1768525740,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "SpaceX IPO closing market cap above $1.2T?",
+      "marketSlug": "spacex-ipo-closing-market-cap-above-1pt2t-954",
+      "eventSlug": "spacex-ipo-closing-market-cap-above",
+      "conditionId": "0x1f31af453f8396fad7664485160aacf7bfbec04c366b5c4c04a1cd2ad2338f38",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 74.8,
+      "size": 131.22,
+      "price": 0.57
+    },
+    {
+      "timestamp": 1768525730,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Odds Trump acquires Greenland before 2027 hit 30% by March 31?",
+      "marketSlug": "odds-trump-acquires-greenland-before-2027-hit-30-by-march-31-645",
+      "eventSlug": "odds-trump-acquires-greenland-before-2027-hit-by-march-31",
+      "conditionId": "0xbd237bc177d934486e7d31df298162e04474017d528d609971d6928e09aaf4d4",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 413.14,
+      "size": 497.76,
+      "price": 0.83
+    },
+    {
+      "timestamp": 1768525708,
+      "trader": "ImJustKen",
+      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "market": "Will Trump nominate Kevin Hassett as the next Fed chair?",
+      "marketSlug": "will-trump-nominate-kevin-hassett-as-the-next-fed-chair",
+      "eventSlug": "who-will-trump-nominate-as-fed-chair",
+      "conditionId": "0xdcc87b9ca36015e396bd0eebca29e854a136ed2b0b701049d1ee9da6bee3eb35",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": -312.26,
+      "size": 466.06,
+      "price": 0.67
+    },
+    {
       "timestamp": 1768525700,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
@@ -7847,21 +7892,6 @@
     },
     {
       "timestamp": 1768518302,
-      "trader": "archaic",
-      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
-      "market": "Will the Iranian regime fall before 2027?",
-      "marketSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
-      "eventSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
-      "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "decreased",
-      "delta": -13.9,
-      "size": 21.72,
-      "price": 0.64
-    },
-    {
-      "timestamp": 1768518302,
       "trader": "LlamaEnjoyer",
       "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
       "market": "Will FC Barcelona win on 2026-01-15?",
@@ -7874,6 +7904,21 @@
       "delta": 1018.98,
       "size": 1020,
       "price": 0.999
+    },
+    {
+      "timestamp": 1768518302,
+      "trader": "archaic",
+      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
+      "market": "Will the Iranian regime fall before 2027?",
+      "marketSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "eventSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": -13.9,
+      "size": 21.72,
+      "price": 0.64
     },
     {
       "timestamp": 1768518262,
@@ -7997,6 +8042,21 @@
     },
     {
       "timestamp": 1768518188,
+      "trader": "LlamaEnjoyer",
+      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
+      "market": "Will FC Barcelona win on 2026-01-15?",
+      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
+      "eventSlug": "cdr-rrc-fcb-2026-01-15",
+      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 246.66,
+      "size": 246.91,
+      "price": 0.999
+    },
+    {
+      "timestamp": 1768518188,
       "trader": "archaic",
       "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
       "market": "Will the Iranian regime fall before 2027?",
@@ -8024,21 +8084,6 @@
       "delta": -2.52,
       "size": 2.66949,
       "price": 0.9439997902221023
-    },
-    {
-      "timestamp": 1768518188,
-      "trader": "LlamaEnjoyer",
-      "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
-      "market": "Will FC Barcelona win on 2026-01-15?",
-      "marketSlug": "cdr-rrc-fcb-2026-01-15-fcb",
-      "eventSlug": "cdr-rrc-fcb-2026-01-15",
-      "conditionId": "0x5fce4b8dbbaed7ebacd0d99095a21679099c897de055d326a009851e7d68c28d",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 246.66,
-      "size": 246.91,
-      "price": 0.999
     },
     {
       "timestamp": 1768518176,
@@ -9617,21 +9662,6 @@
     },
     {
       "timestamp": 1768517096,
-      "trader": "archaic",
-      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
-      "market": "US strikes Iran by March 31, 2026?",
-      "marketSlug": "us-strikes-iran-by-march-31-2026-393-221-132-633-215-592-866-184",
-      "eventSlug": "us-strikes-iran-by",
-      "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "decreased",
-      "delta": -1.96,
-      "size": 3.84,
-      "price": 0.51
-    },
-    {
-      "timestamp": 1768517096,
       "trader": "LlamaEnjoyer",
       "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
       "market": "Will FC Barcelona win on 2026-01-15?",
@@ -9644,6 +9674,21 @@
       "delta": 63.63,
       "size": 63.69,
       "price": 0.999
+    },
+    {
+      "timestamp": 1768517096,
+      "trader": "archaic",
+      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
+      "market": "US strikes Iran by March 31, 2026?",
+      "marketSlug": "us-strikes-iran-by-march-31-2026-393-221-132-633-215-592-866-184",
+      "eventSlug": "us-strikes-iran-by",
+      "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": -1.96,
+      "size": 3.84,
+      "price": 0.51
     },
     {
       "timestamp": 1768517046,
@@ -10367,21 +10412,6 @@
     },
     {
       "timestamp": 1768516620,
-      "trader": "archaic",
-      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
-      "market": "US strikes Iran by March 31, 2026?",
-      "marketSlug": "us-strikes-iran-by-march-31-2026-393-221-132-633-215-592-866-184",
-      "eventSlug": "us-strikes-iran-by",
-      "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "decreased",
-      "delta": -43.33,
-      "size": 84.97,
-      "price": 0.51
-    },
-    {
-      "timestamp": 1768516620,
       "trader": "LlamaEnjoyer",
       "traderAddress": "0x9b979a065641e8cfde3022a30ed2d9415cf55e12",
       "market": "Will FC Barcelona win on 2026-01-15?",
@@ -10394,6 +10424,21 @@
       "delta": 298.7,
       "size": 299,
       "price": 0.999
+    },
+    {
+      "timestamp": 1768516620,
+      "trader": "archaic",
+      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
+      "market": "US strikes Iran by March 31, 2026?",
+      "marketSlug": "us-strikes-iran-by-march-31-2026-393-221-132-633-215-592-866-184",
+      "eventSlug": "us-strikes-iran-by",
+      "conditionId": "0x4b02efe53e631ada84681303fd66d79ad615f3d2b6a28b4633d43d935f89af58",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": -43.33,
+      "size": 84.97,
+      "price": 0.51
     },
     {
       "timestamp": 1768516614,
@@ -19727,21 +19772,6 @@
     },
     {
       "timestamp": 1768511894,
-      "trader": "Car",
-      "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
-      "market": "Will the US strike Somalia next?",
-      "marketSlug": "will-the-us-strike-somalia-next-795",
-      "eventSlug": "next-country-us-strikes-329",
-      "conditionId": "0xd8a8fbacfbb4b7748d7b78fd1a37b2ea0b3c2552bfcccf81b7fcdfea81076132",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 33.4,
-      "size": 40,
-      "price": 0.835
-    },
-    {
-      "timestamp": 1768511894,
       "trader": "mombil",
       "traderAddress": "0x68c24bf4a8ad4d79a6fe4b8eec6f93a02dfd1711",
       "market": "Will Trump and Machado share the Nobel Peace Prize?",
@@ -19754,6 +19784,21 @@
       "delta": 170.48,
       "size": 227.68,
       "price": 0.7487842586085734
+    },
+    {
+      "timestamp": 1768511894,
+      "trader": "Car",
+      "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+      "market": "Will the US strike Somalia next?",
+      "marketSlug": "will-the-us-strike-somalia-next-795",
+      "eventSlug": "next-country-us-strikes-329",
+      "conditionId": "0xd8a8fbacfbb4b7748d7b78fd1a37b2ea0b3c2552bfcccf81b7fcdfea81076132",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 33.4,
+      "size": 40,
+      "price": 0.835
     },
     {
       "timestamp": 1768511892,
@@ -21914,36 +21959,6 @@
       "delta": -3.1,
       "size": 10,
       "price": 0.31
-    },
-    {
-      "timestamp": 1768510680,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Khamenei out as Supreme Leader of Iran by February 28?",
-      "marketSlug": "khamenei-out-as-supreme-leader-of-iran-by-february-28",
-      "eventSlug": "khamenei-out-as-supreme-leader-of-iran-by-february-28",
-      "conditionId": "0xd4bbf7f6707c67beb736135ad32a41f6db41f8ae52d3ac4919650de9eeb94ed8",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 16.74,
-      "size": 21.739129,
-      "price": 0.770000030820002
-    },
-    {
-      "timestamp": 1768510630,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Iran Strike on Israel by January 31?",
-      "marketSlug": "iran-strike-on-israel-by-january-31",
-      "eventSlug": "iran-strike-on-israel-by",
-      "conditionId": "0x6a990de325fc94ed8ec111e0f44c0f59190074d7187e1d9728bf316ce845ea79",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "decreased",
-      "delta": -92.13,
-      "size": 111,
-      "price": 0.83
     },
     {
       "timestamp": 1768510580,
@@ -28964,28 +28979,13 @@
       "delta": 45.5,
       "size": 70,
       "price": 0.65
-    },
-    {
-      "timestamp": 1768502650,
-      "trader": "0xheavy888",
-      "traderAddress": "0xec981ed70ae69c5cbcac08c1ba063e734f6bafcd",
-      "market": "Counter-Strike: Liquid vs NIP (BO3)",
-      "marketSlug": "cs2-tl1-nip-2026-01-15",
-      "eventSlug": "cs2-tl1-nip-2026-01-15",
-      "conditionId": "0x6017adaa0eeec053ac8ad9ad29556728bdf306512ef2cc21b3878e5925996dd8",
-      "outcome": "Liquid",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 65,
-      "size": 100,
-      "price": 0.65
     }
   ],
   "windowSummaries": {
-    "1h": 8147.25,
-    "6h": 142247.09,
-    "24h": 232237.1,
-    "7d": 232237.1,
-    "30d": 232237.1
+    "1h": 8311.36,
+    "6h": 142490.32,
+    "24h": 232423.17,
+    "7d": 232423.17,
+    "30d": 232423.17
   }
 }
