@@ -55,10 +55,10 @@
         {
           "address": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
           "label": "Dropper",
-          "exposure": 72149.7513,
+          "exposure": 72185.8623,
           "size": 72221.9733,
           "avgPrice": 0.9973,
-          "curPrice": 0.999
+          "curPrice": 0.9995
         },
         {
           "address": "0xc4086b708cd3a50880b7069add1a1a80000f4675",
@@ -77,7 +77,7 @@
           "curPrice": 0.999
         }
       ],
-      "totalExposure": 4214134.4989,
+      "totalExposure": 4214170.6099,
       "change24h": 2746603.34,
       "avgEntry": 1,
       "curPrice": 1,
@@ -1906,17 +1906,17 @@
         {
           "address": "0x0c97325a81ad05c6b58ae30d12eaaec1b8451b68",
           "label": "dontshowmyname",
-          "exposure": 190.9,
+          "exposure": 191.3,
           "size": 200,
           "avgPrice": 0.52,
-          "curPrice": 0.9545
+          "curPrice": 0.9565
         }
       ],
-      "totalExposure": 41356.5232,
+      "totalExposure": 41356.923200000005,
       "change24h": 18240.28,
       "avgEntry": 0.76,
-      "curPrice": 0.95,
-      "priceChangePct": 25.6
+      "curPrice": 0.96,
+      "priceChangePct": 25.9
     },
     {
       "conditionId": "0xf835de42f566a714be49df12ba436279ac3b06a8b570baaca49835cd0358c916",
@@ -3659,17 +3659,17 @@
         {
           "address": "0xd5ccdf772f795547e299de57f47966e24de8dea4",
           "label": "tsybka",
-          "exposure": 14116.7576,
+          "exposure": 14123.9895,
           "size": 14463.891,
           "avgPrice": 0.964,
-          "curPrice": 0.976
+          "curPrice": 0.9765
         }
       ],
-      "totalExposure": 14116.7576,
+      "totalExposure": 14123.9895,
       "change24h": 2882.99,
       "avgEntry": 0.96,
       "curPrice": 0.98,
-      "priceChangePct": 1.2
+      "priceChangePct": 1.3
     },
     {
       "conditionId": "0xe67c947bf8eeb8dffdeea19806cf266fe65f6d20f3e5bbf5135e11e544fe9b7f",
@@ -4055,7 +4055,7 @@
       "outcome": "Yes",
       "outcomeIndex": 0,
       "traderCount": 3,
-      "traderCountChange": 1,
+      "traderCountChange": 0,
       "traders": [
         {
           "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
@@ -4076,17 +4076,17 @@
         {
           "address": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
           "label": "Dropper",
-          "exposure": 11209.2513,
+          "exposure": 11191.0051,
           "size": 12164.136,
           "avgPrice": 0.56,
-          "curPrice": 0.9215
+          "curPrice": 0.92
         }
       ],
-      "totalExposure": 12905.6608,
+      "totalExposure": 12887.4146,
       "change24h": 7521.69,
       "avgEntry": 0.59,
       "curPrice": 0.92,
-      "priceChangePct": 55.3
+      "priceChangePct": 55
     },
     {
       "conditionId": "0xe3cb3b6facb460f6774f7040f1a7b92d95a10455c3c8698abf3b764ee00424f0",
@@ -5288,18 +5288,18 @@
         {
           "address": "0x75e765216a57942d738d880ffcda854d9f869080",
           "label": "25usdc",
-          "exposure": 483.9975,
+          "exposure": 450.9976,
           "size": 21999.8871,
           "avgPrice": 0.0171,
-          "curPrice": 0.022
+          "curPrice": 0.0205
         },
         {
           "address": "0x71edffd0d70a1da823ff07a3c6fc81457294d338",
           "label": "Trader_0x71ed",
-          "exposure": 22,
+          "exposure": 20.5,
           "size": 1000,
           "avgPrice": 0.022,
-          "curPrice": 0.022
+          "curPrice": 0.0205
         },
         {
           "address": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
@@ -5312,33 +5312,33 @@
         {
           "address": "0x68c24bf4a8ad4d79a6fe4b8eec6f93a02dfd1711",
           "label": "mombil",
-          "exposure": 360.0133,
+          "exposure": 335.4669,
           "size": 16364.2425,
           "avgPrice": 0.0141,
-          "curPrice": 0.022
+          "curPrice": 0.0205
         },
         {
           "address": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
           "label": "TheWolfOfPoly",
-          "exposure": 528,
+          "exposure": 492,
           "size": 24000,
           "avgPrice": 0.0251,
-          "curPrice": 0.022
+          "curPrice": 0.0205
         },
         {
           "address": "0x0c97325a81ad05c6b58ae30d12eaaec1b8451b68",
           "label": "dontshowmyname",
-          "exposure": 22,
+          "exposure": 20.5,
           "size": 1000,
           "avgPrice": 0.0188,
-          "curPrice": 0.022
+          "curPrice": 0.0205
         }
       ],
-      "totalExposure": 7974.8941,
+      "totalExposure": 7878.3478000000005,
       "change24h": 97.67,
       "avgEntry": 0.02,
       "curPrice": 0.02,
-      "priceChangePct": 15.8
+      "priceChangePct": 7.9
     },
     {
       "conditionId": "0x21ad31a46bfaa51650766eff6dc69c866959e32d965ffb116020e37694b6317d",
@@ -5390,17 +5390,17 @@
         {
           "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
           "label": "Car",
-          "exposure": 7672,
+          "exposure": 7656,
           "size": 8000,
           "avgPrice": 0.9491,
-          "curPrice": 0.959
+          "curPrice": 0.957
         }
       ],
-      "totalExposure": 7672,
+      "totalExposure": 7656,
       "change24h": 7593.18,
       "avgEntry": 0.95,
       "curPrice": 0.96,
-      "priceChangePct": 1
+      "priceChangePct": 0.8
     },
     {
       "conditionId": "0x43272c02b8407ed3f8d5b04fb4cb132d7a59c5df6ecc423afcf66f1c778d1887",
@@ -6295,25 +6295,25 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 3597.0772,
+          "exposure": 3584.0796,
           "size": 6498.7845,
           "avgPrice": 0.3301,
-          "curPrice": 0.5535
+          "curPrice": 0.5515
         },
         {
           "address": "0x75e765216a57942d738d880ffcda854d9f869080",
           "label": "25usdc",
-          "exposure": 2213.9866,
+          "exposure": 2205.9867,
           "size": 3999.9758,
           "avgPrice": 0.2833,
-          "curPrice": 0.5535
+          "curPrice": 0.5515
         }
       ],
-      "totalExposure": 5811.0638,
+      "totalExposure": 5790.0663,
       "change24h": 0,
       "avgEntry": 0.31,
       "curPrice": 0.55,
-      "priceChangePct": 77.3
+      "priceChangePct": 76.6
     },
     {
       "conditionId": "0x41eb18ebd9df8d99e4e8528104d3d7d7e6bcb014209448f2fe271cf8dc7052b1",
@@ -6419,17 +6419,17 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 5702.1107,
+          "exposure": 5698.9725,
           "size": 6276.4014,
           "avgPrice": 0.9638,
-          "curPrice": 0.9085
+          "curPrice": 0.908
         }
       ],
-      "totalExposure": 5702.1107,
+      "totalExposure": 5698.9725,
       "change24h": 0,
       "avgEntry": 0.96,
       "curPrice": 0.91,
-      "priceChangePct": -5.7
+      "priceChangePct": -5.8
     },
     {
       "conditionId": "0x82612bedb300adea234498cdb4754c3bd66d8f128ee51c760d4b3d7417ac11a5",
@@ -7588,13 +7588,13 @@
         {
           "address": "0xcd71fd5370880f3d92bb941e628c05840fe0d127",
           "label": "Kvh1992",
-          "exposure": 4086.5265,
+          "exposure": 4084.2098,
           "size": 4633.25,
           "avgPrice": 0.9241,
-          "curPrice": 0.882
+          "curPrice": 0.8815
         }
       ],
-      "totalExposure": 4086.5265,
+      "totalExposure": 4084.2098,
       "change24h": 0,
       "avgEntry": 0.92,
       "curPrice": 0.88,
@@ -8135,17 +8135,17 @@
         {
           "address": "0x06ecb7e739f5455922ce57e83284f132c7f0f845",
           "label": "Frosenn",
-          "exposure": 3611.4312,
+          "exposure": 3616.9702,
           "size": 3692.67,
           "avgPrice": 0.9614,
-          "curPrice": 0.978
+          "curPrice": 0.9795
         }
       ],
-      "totalExposure": 3611.4312,
+      "totalExposure": 3616.9702,
       "change24h": 0,
       "avgEntry": 0.96,
       "curPrice": 0.98,
-      "priceChangePct": 1.7
+      "priceChangePct": 1.9
     },
     {
       "conditionId": "0xfd94efe3bbd624fb6577ad51cf5639dcbbcd0eb5a6f03543d98a8e4fe58af27a",
@@ -9231,6 +9231,33 @@
       "priceChangePct": -7.6
     },
     {
+      "conditionId": "0x25c46fea6a041cd1a44aa766a731a3750ffeab51d455e0366c5d312cf15a92bf",
+      "title": "Will Opendoor reach $10.25 in January?",
+      "slug": "will-open-reach-10-25-in-january",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/opendoor-0bd9a25015.jpg",
+      "eventSlug": "what-price-will-open-hit-in-january-2026",
+      "endDate": "2026-02-01",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 2942.3024,
+          "size": 3033.3015,
+          "avgPrice": 0.932,
+          "curPrice": 0.97
+        }
+      ],
+      "totalExposure": 2942.3024,
+      "change24h": 0,
+      "avgEntry": 0.93,
+      "curPrice": 0.97,
+      "priceChangePct": 4.1
+    },
+    {
       "conditionId": "0x437f095880aa1008305ec7260c6dda3539d33b16fa8624e0575f6a641005aac1",
       "title": "MH370 underwater wreckage found by June 30, 2026?",
       "slug": "mh370-underwater-wreckage-found-by-june-30-2026",
@@ -9256,33 +9283,6 @@
       "avgEntry": 0.82,
       "curPrice": 0.83,
       "priceChangePct": 0
-    },
-    {
-      "conditionId": "0x25c46fea6a041cd1a44aa766a731a3750ffeab51d455e0366c5d312cf15a92bf",
-      "title": "Will Opendoor reach $10.25 in January?",
-      "slug": "will-open-reach-10-25-in-january",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/opendoor-0bd9a25015.jpg",
-      "eventSlug": "what-price-will-open-hit-in-january-2026",
-      "endDate": "2026-02-01",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 2924.1026,
-          "size": 3033.3015,
-          "avgPrice": 0.932,
-          "curPrice": 0.964
-        }
-      ],
-      "totalExposure": 2924.1026,
-      "change24h": 0,
-      "avgEntry": 0.93,
-      "curPrice": 0.96,
-      "priceChangePct": 3.4
     },
     {
       "conditionId": "0xfaa433e162e020c56c522acb2f9f7215ce6e4e4391c4fb42beba14275c0a43fe",
@@ -10194,13 +10194,13 @@
         {
           "address": "0xcd71fd5370880f3d92bb941e628c05840fe0d127",
           "label": "Kvh1992",
-          "exposure": 2355.0418,
+          "exposure": 2356.2709,
           "size": 2458.29,
           "avgPrice": 0.9442,
-          "curPrice": 0.958
+          "curPrice": 0.9585
         }
       ],
-      "totalExposure": 2355.0418,
+      "totalExposure": 2356.2709,
       "change24h": 0,
       "avgEntry": 0.94,
       "curPrice": 0.96,
@@ -11229,6 +11229,33 @@
       "priceChangePct": 9.5
     },
     {
+      "conditionId": "0xc7e4c1eec973fe72ff3c0a7e758e06944f69ff3fbff304672eb90e91b5924896",
+      "title": "Will the US next strike Iran on January 18, 2026 (ET)?",
+      "slug": "will-the-us-next-strike-iran-on-january-18-2026-et-229",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-strikes-iran-next-on-i8O7r2SBkycN.jpg",
+      "eventSlug": "us-next-strikes-iran-on",
+      "endDate": "2026-01-31",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 1956.7463,
+          "size": 1958.705,
+          "avgPrice": 0.9979,
+          "curPrice": 0.999
+        }
+      ],
+      "totalExposure": 1956.7463,
+      "change24h": 577.17,
+      "avgEntry": 1,
+      "curPrice": 1,
+      "priceChangePct": 0.1
+    },
+    {
       "conditionId": "0xc47a00ca4047f025cdbc4e32a895a51190ff4c00fdcb4ca73e0256bb798bc819",
       "title": "Will Google be the first company to have an AI model hit 1500 on Chatbot Arena by June 30 2026?",
       "slug": "will-google-be-the-first-company-to-have-an-ai-model-hit-1500-on-chatbot-arena-by-june-30-2026",
@@ -11308,33 +11335,6 @@
       "avgEntry": 0.9,
       "curPrice": 0.93,
       "priceChangePct": 2.8
-    },
-    {
-      "conditionId": "0xc7e4c1eec973fe72ff3c0a7e758e06944f69ff3fbff304672eb90e91b5924896",
-      "title": "Will the US next strike Iran on January 18, 2026 (ET)?",
-      "slug": "will-the-us-next-strike-iran-on-january-18-2026-et-229",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-strikes-iran-next-on-i8O7r2SBkycN.jpg",
-      "eventSlug": "us-next-strikes-iran-on",
-      "endDate": "2026-01-31",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 1921.122,
-          "size": 1923.045,
-          "avgPrice": 0.9979,
-          "curPrice": 0.999
-        }
-      ],
-      "totalExposure": 1921.122,
-      "change24h": 577.17,
-      "avgEntry": 1,
-      "curPrice": 1,
-      "priceChangePct": 0.1
     },
     {
       "conditionId": "0x580386e7f3b47fa0cd6d14688894f16958e6eacf5c9dce02bbfd4028bf6e738f",
@@ -11815,13 +11815,13 @@
         {
           "address": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
           "label": "TheWolfOfPoly",
-          "exposure": 685.65,
+          "exposure": 686,
           "size": 700,
           "avgPrice": 0.9285,
-          "curPrice": 0.9795
+          "curPrice": 0.98
         }
       ],
-      "totalExposure": 1835.7594,
+      "totalExposure": 1836.1094,
       "change24h": 0,
       "avgEntry": 0.93,
       "curPrice": 0.98,
@@ -12789,25 +12789,25 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 963.7281,
+          "exposure": 970.8143,
           "size": 1417.2472,
           "avgPrice": 0.7901,
-          "curPrice": 0.68
+          "curPrice": 0.685
         },
         {
           "address": "0x71edffd0d70a1da823ff07a3c6fc81457294d338",
           "label": "Trader_0x71ed",
-          "exposure": 628.32,
+          "exposure": 632.94,
           "size": 924,
           "avgPrice": 0.6363,
-          "curPrice": 0.68
+          "curPrice": 0.685
         }
       ],
-      "totalExposure": 1592.0481,
+      "totalExposure": 1603.7543,
       "change24h": 0,
       "avgEntry": 0.73,
-      "curPrice": 0.68,
-      "priceChangePct": -6.8
+      "curPrice": 0.69,
+      "priceChangePct": -6.1
     },
     {
       "conditionId": "0x29745e02be4cf797fb140b47232e1152cfd192df87d7b106026e4ce938e4ab43",
@@ -13247,17 +13247,17 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 1503.2732,
+          "exposure": 1497.7519,
           "size": 3680.8846,
           "avgPrice": 0.8636,
-          "curPrice": 0.4084
+          "curPrice": 0.4069
         }
       ],
-      "totalExposure": 1503.2732,
+      "totalExposure": 1497.7519,
       "change24h": 0,
       "avgEntry": 0.86,
       "curPrice": 0.41,
-      "priceChangePct": -52.7
+      "priceChangePct": -52.9
     },
     {
       "conditionId": "0x0dcb82c1f435a34fd6f80b0ed6ac98e96125e347d50c258426e5c9600e085661",
@@ -13988,33 +13988,6 @@
       "priceChangePct": 20.5
     },
     {
-      "conditionId": "0x78c7c0c62075c1bbf73250cb56cafd993240736c5de9184d3eccb5891dcccb6a",
-      "title": "Will Apple (AAPL) close above $230 end of January?",
-      "slug": "aapl-above-230-on-january-30-2026",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/aapl-week-december-5-2025-ezxpBoeOg6BO.png",
-      "eventSlug": "aapl-above-in-january-2026",
-      "endDate": "2026-01-30",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 1338.9174,
-          "size": 1495.1618,
-          "avgPrice": 0.9539,
-          "curPrice": 0.8955
-        }
-      ],
-      "totalExposure": 1338.9174,
-      "change24h": 0,
-      "avgEntry": 0.95,
-      "curPrice": 0.9,
-      "priceChangePct": -6.1
-    },
-    {
       "conditionId": "0x7c62564713db2e9518ab636a7a8a1b9d4ee0df62a26979efcd20b52ce0fe8dd3",
       "title": "Insurrection Act invoked by March 31?",
       "slug": "insurrection-act-invoked-by-march-31-346",
@@ -14048,6 +14021,33 @@
       "avgEntry": 0.72,
       "curPrice": 0.73,
       "priceChangePct": 1.8
+    },
+    {
+      "conditionId": "0x78c7c0c62075c1bbf73250cb56cafd993240736c5de9184d3eccb5891dcccb6a",
+      "title": "Will Apple (AAPL) close above $230 end of January?",
+      "slug": "aapl-above-230-on-january-30-2026",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/aapl-week-december-5-2025-ezxpBoeOg6BO.png",
+      "eventSlug": "aapl-above-in-january-2026",
+      "endDate": "2026-01-30",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 1329.9464,
+          "size": 1495.1618,
+          "avgPrice": 0.9539,
+          "curPrice": 0.8895
+        }
+      ],
+      "totalExposure": 1329.9464,
+      "change24h": 0,
+      "avgEntry": 0.95,
+      "curPrice": 0.89,
+      "priceChangePct": -6.8
     },
     {
       "conditionId": "0x1597a8e275ae13b3be4a1875362a44056bdd5a0b72ca4d830587594c5f21c3c5",
@@ -14172,17 +14172,17 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 1316.5775,
+          "exposure": 1317.4187,
           "size": 1682.5271,
           "avgPrice": 0.9299,
-          "curPrice": 0.7825
+          "curPrice": 0.783
         }
       ],
-      "totalExposure": 1316.5775,
+      "totalExposure": 1317.4187,
       "change24h": 0,
       "avgEntry": 0.93,
       "curPrice": 0.78,
-      "priceChangePct": -15.9
+      "priceChangePct": -15.8
     },
     {
       "conditionId": "0x49f6afed30cc388ae3426385a85b2c614b8685dee2ab2dae672cfd0f0220ecac",
@@ -15430,7 +15430,7 @@
       "outcome": "Yes",
       "outcomeIndex": 0,
       "traderCount": 2,
-      "traderCountChange": 1,
+      "traderCountChange": 0,
       "traders": [
         {
           "address": "0xa4b366ad22fc0d06f1e934ff468e8922431a87b8",
@@ -16943,6 +16943,33 @@
       "priceChangePct": 0.7
     },
     {
+      "conditionId": "0x6acea3596be0a8126e8658d39ecc1ac44bee1246c162e51a8062b380bcf147c2",
+      "title": "Will the U.S. collect less than $100b in revenue in 2025?",
+      "slug": "will-the-us-collect-less-than-100b-in-revenue-in-2025",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-much-revenue-will-the-us-raise-from-tariffs-in-2025-lUbEhM1AK-xa.jpg",
+      "eventSlug": "how-much-revenue-will-the-us-raise-from-tariffs-in-2025",
+      "endDate": "2026-02-28",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0x75e765216a57942d738d880ffcda854d9f869080",
+          "label": "25usdc",
+          "exposure": 897,
+          "size": 2000,
+          "avgPrice": 0.56,
+          "curPrice": 0.4485
+        }
+      ],
+      "totalExposure": 897,
+      "change24h": 0,
+      "avgEntry": 0.56,
+      "curPrice": 0.45,
+      "priceChangePct": -19.9
+    },
+    {
       "conditionId": "0xd98bd71f9e730990d3737e8bcd6c1b5cad3c4975ae359c031fea49ccff228521",
       "title": "EdgeX FDV above $1B one day after launch?",
       "slug": "edgex-fdv-above-1b-one-day-after-launch",
@@ -16968,33 +16995,6 @@
       "avgEntry": 0.13,
       "curPrice": 0.34,
       "priceChangePct": 151.5
-    },
-    {
-      "conditionId": "0x6acea3596be0a8126e8658d39ecc1ac44bee1246c162e51a8062b380bcf147c2",
-      "title": "Will the U.S. collect less than $100b in revenue in 2025?",
-      "slug": "will-the-us-collect-less-than-100b-in-revenue-in-2025",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-much-revenue-will-the-us-raise-from-tariffs-in-2025-lUbEhM1AK-xa.jpg",
-      "eventSlug": "how-much-revenue-will-the-us-raise-from-tariffs-in-2025",
-      "endDate": "2026-02-28",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0x75e765216a57942d738d880ffcda854d9f869080",
-          "label": "25usdc",
-          "exposure": 893,
-          "size": 2000,
-          "avgPrice": 0.56,
-          "curPrice": 0.4465
-        }
-      ],
-      "totalExposure": 893,
-      "change24h": 0,
-      "avgEntry": 0.56,
-      "curPrice": 0.45,
-      "priceChangePct": -20.3
     },
     {
       "conditionId": "0x33086d942ec3fdcbaebd8a145eaf957903a9bb8b36682c4c69fee1089e4e528a",
@@ -17416,25 +17416,25 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 831.5992,
+          "exposure": 831.1492,
           "size": 899.9992,
           "avgPrice": 0.9671,
-          "curPrice": 0.924
+          "curPrice": 0.9235
         },
         {
           "address": "0x0c97325a81ad05c6b58ae30d12eaaec1b8451b68",
           "label": "dontshowmyname",
-          "exposure": 18.48,
+          "exposure": 18.47,
           "size": 20,
           "avgPrice": 0.32,
-          "curPrice": 0.924
+          "curPrice": 0.9235
         }
       ],
-      "totalExposure": 850.0792,
+      "totalExposure": 849.6192,
       "change24h": 0,
       "avgEntry": 0.95,
       "curPrice": 0.92,
-      "priceChangePct": -3
+      "priceChangePct": -3.1
     },
     {
       "conditionId": "0xeec3721d3883d5a27a992090d85c8f68fffe1f40774c3a891d078eed10d42508",
@@ -18061,7 +18061,7 @@
       "outcome": "No",
       "outcomeIndex": 1,
       "traderCount": 1,
-      "traderCountChange": -2,
+      "traderCountChange": 0,
       "traders": [
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
@@ -18570,33 +18570,6 @@
       "priceChangePct": 3.5
     },
     {
-      "conditionId": "0x284c11566675c2764eeca776d2e0834fefc1430514b7b55adbb690d2fbbf678e",
-      "title": "Will 2026 rank as the sixth-hottest year on record or lower?",
-      "slug": "will-2026-rank-as-the-sixth-hottest-year-on-record-or-lower",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/earth+on+fire.png",
-      "eventSlug": "where-will-2026-rank-among-the-hottest-years-on-record",
-      "endDate": "2026-12-31",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 743.4045,
-          "size": 19309.2085,
-          "avgPrice": 0.0991,
-          "curPrice": 0.0385
-        }
-      ],
-      "totalExposure": 743.4045,
-      "change24h": 0,
-      "avgEntry": 0.1,
-      "curPrice": 0.04,
-      "priceChangePct": -61.2
-    },
-    {
       "conditionId": "0xfb1961cd40bf34591d5799acf47c4ea67a2ab0732448d5a742d4d47e493021c3",
       "title": "Will Google (GOOGL) close above $270 end of January?",
       "slug": "googl-above-270-on-january-30-2026",
@@ -18757,6 +18730,33 @@
       "avgEntry": 0.98,
       "curPrice": 0.99,
       "priceChangePct": 0.8
+    },
+    {
+      "conditionId": "0x284c11566675c2764eeca776d2e0834fefc1430514b7b55adbb690d2fbbf678e",
+      "title": "Will 2026 rank as the sixth-hottest year on record or lower?",
+      "slug": "will-2026-rank-as-the-sixth-hottest-year-on-record-or-lower",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/earth+on+fire.png",
+      "eventSlug": "where-will-2026-rank-among-the-hottest-years-on-record",
+      "endDate": "2026-12-31",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 733.7499,
+          "size": 19309.2085,
+          "avgPrice": 0.0991,
+          "curPrice": 0.038
+        }
+      ],
+      "totalExposure": 733.7499,
+      "change24h": 0,
+      "avgEntry": 0.1,
+      "curPrice": 0.04,
+      "priceChangePct": -61.7
     },
     {
       "conditionId": "0x5bc23ef1d55fb8d4a1b21b7c8780aa1b6b019262dda806da8a79dc8ada217f33",
@@ -20144,25 +20144,25 @@
         {
           "address": "0x75e765216a57942d738d880ffcda854d9f869080",
           "label": "25usdc",
-          "exposure": 509.2313,
+          "exposure": 510.1138,
           "size": 882.55,
           "avgPrice": 0.0912,
-          "curPrice": 0.577
+          "curPrice": 0.578
         },
         {
           "address": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
           "label": "TheWolfOfPoly",
-          "exposure": 96.5955,
+          "exposure": 96.7629,
           "size": 167.41,
           "avgPrice": 0.159,
-          "curPrice": 0.577
+          "curPrice": 0.578
         }
       ],
-      "totalExposure": 605.8267999999999,
+      "totalExposure": 606.8767,
       "change24h": 0,
       "avgEntry": 0.1,
       "curPrice": 0.58,
-      "priceChangePct": 465.6
+      "priceChangePct": 466.6
     },
     {
       "conditionId": "0x08d323f9db2f924455fef874c6d0cf8428f672d9c0492b7a08aa144611099044",
@@ -21169,33 +21169,6 @@
       "priceChangePct": -15.9
     },
     {
-      "conditionId": "0x0ac3d32c765a92cffb8c9907e0591e7a000a8b8631c4fe67cbd9ae31a53c502b",
-      "title": "Paramount x Warner Bros. acquisition announced by June 30?",
-      "slug": "paramount-acquires-warner-bros-discovery-by-june-30",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/paramount-acquires-warner-bros-discovery-by-june-30-IoozBf015TvE.jpg",
-      "eventSlug": "paramount-acquires-warner-bros-discovery-by-june-30",
-      "endDate": "2026-06-30",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0x000d257d2dc7616feaef4ae0f14600fdf50a758e",
-          "label": "scottilicious",
-          "exposure": 537.0672,
-          "size": 654.96,
-          "avgPrice": 0.6807,
-          "curPrice": 0.82
-        }
-      ],
-      "totalExposure": 537.0672,
-      "change24h": 0,
-      "avgEntry": 0.68,
-      "curPrice": 0.82,
-      "priceChangePct": 20.5
-    },
-    {
       "conditionId": "0x7be94da36b370deef69c8597b009b1524a6306d42b789e580ea0c6aeaaa93d36",
       "title": "Will NVIDIA (NVDA) finish week of January 19 above $205?",
       "slug": "nvda-above-205-on-january-23-2026",
@@ -21248,6 +21221,33 @@
       "avgEntry": 0.77,
       "curPrice": 0.46,
       "priceChangePct": -41.1
+    },
+    {
+      "conditionId": "0x0ac3d32c765a92cffb8c9907e0591e7a000a8b8631c4fe67cbd9ae31a53c502b",
+      "title": "Paramount x Warner Bros. acquisition announced by June 30?",
+      "slug": "paramount-acquires-warner-bros-discovery-by-june-30",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/paramount-acquires-warner-bros-discovery-by-june-30-IoozBf015TvE.jpg",
+      "eventSlug": "paramount-acquires-warner-bros-discovery-by-june-30",
+      "endDate": "2026-06-30",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0x000d257d2dc7616feaef4ae0f14600fdf50a758e",
+          "label": "scottilicious",
+          "exposure": 533.7269,
+          "size": 654.96,
+          "avgPrice": 0.6807,
+          "curPrice": 0.8149
+        }
+      ],
+      "totalExposure": 533.7269,
+      "change24h": 0,
+      "avgEntry": 0.68,
+      "curPrice": 0.81,
+      "priceChangePct": 19.7
     },
     {
       "conditionId": "0x76cface9f6df604ff32447bce58656b7a72b6659324d089c73a13a99f06c8aae",
@@ -21644,33 +21644,6 @@
       "priceChangePct": 4.9
     },
     {
-      "conditionId": "0xf0d4ee47d3abe6161f1e8f93bfe46d06d1ffd63f48e71c49aa81b2250e152e8b",
-      "title": "Israel x Iran ceasefire broken by June 30, 2026?",
-      "slug": "israel-x-iran-ceasefire-broken-by-june-30-2026-438-193",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/israel-x-iran-ceasefire-broken-by--OrvBXFZfRmz.jpg",
-      "eventSlug": "israel-x-iran-ceasefire-broken-by",
-      "endDate": "2026-03-31",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 501.0205,
-          "size": 842.0512,
-          "avgPrice": 0.6878,
-          "curPrice": 0.595
-        }
-      ],
-      "totalExposure": 501.0205,
-      "change24h": 0,
-      "avgEntry": 0.69,
-      "curPrice": 0.6,
-      "priceChangePct": -13.5
-    },
-    {
       "conditionId": "0x2b1e18ef56cb7222ce2fb03d6cd9fb8fcca06d80b64d0dacbe6ce2f00ab31d00",
       "title": "Will Henrique Gouveia e Melo win the 2026 Portugal presidential election?",
       "slug": "will-henrique-gouveia-e-melo-win-the-2026-portugal-presidential-election",
@@ -21696,6 +21669,33 @@
       "avgEntry": 0.97,
       "curPrice": 1,
       "priceChangePct": 2.8
+    },
+    {
+      "conditionId": "0xf0d4ee47d3abe6161f1e8f93bfe46d06d1ffd63f48e71c49aa81b2250e152e8b",
+      "title": "Israel x Iran ceasefire broken by June 30, 2026?",
+      "slug": "israel-x-iran-ceasefire-broken-by-june-30-2026-438-193",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/israel-x-iran-ceasefire-broken-by--OrvBXFZfRmz.jpg",
+      "eventSlug": "israel-x-iran-ceasefire-broken-by",
+      "endDate": "2026-03-31",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 496.8102,
+          "size": 842.0512,
+          "avgPrice": 0.6878,
+          "curPrice": 0.59
+        }
+      ],
+      "totalExposure": 496.8102,
+      "change24h": 0,
+      "avgEntry": 0.69,
+      "curPrice": 0.59,
+      "priceChangePct": -14.2
     },
     {
       "conditionId": "0x474d64efa8388276eb4a6851fe5d7dc76b33d01c447c02e8c6caaba656edd722",
@@ -22281,33 +22281,6 @@
       "priceChangePct": -28.5
     },
     {
-      "conditionId": "0x61c7a2857f724184aeefcfc1d5c2d058f0b5a3d95c07e0698a8702a2044cc3f9",
-      "title": "Will Meta (META) close above $540 end of January?",
-      "slug": "meta-above-540-on-january-30-2026",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/meta-logo-a093fc9ccc.png",
-      "eventSlug": "meta-above-in-january-2026",
-      "endDate": "2026-01-30",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 472.8759,
-          "size": 506.0203,
-          "avgPrice": 0.9697,
-          "curPrice": 0.9345
-        }
-      ],
-      "totalExposure": 472.8759,
-      "change24h": 0,
-      "avgEntry": 0.97,
-      "curPrice": 0.93,
-      "priceChangePct": -3.6
-    },
-    {
       "conditionId": "0x4b23c2e3ee806915cc1186641d292acbc6b26d7a7746ee93c910b8b0c87d4bca",
       "title": "Will the Fed Cut–Pause–Pause in the next three decisions (Dec–Jan–Mar)?",
       "slug": "will-the-fed-cutpausepause-in-the-next-three-decisions-decjanmar",
@@ -22414,6 +22387,33 @@
       "avgEntry": 0.28,
       "curPrice": 0.11,
       "priceChangePct": -62.9
+    },
+    {
+      "conditionId": "0x61c7a2857f724184aeefcfc1d5c2d058f0b5a3d95c07e0698a8702a2044cc3f9",
+      "title": "Will Meta (META) close above $540 end of January?",
+      "slug": "meta-above-540-on-january-30-2026",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/meta-logo-a093fc9ccc.png",
+      "eventSlug": "meta-above-in-january-2026",
+      "endDate": "2026-01-30",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 469.3338,
+          "size": 506.0203,
+          "avgPrice": 0.9697,
+          "curPrice": 0.9275
+        }
+      ],
+      "totalExposure": 469.3338,
+      "change24h": 0,
+      "avgEntry": 0.97,
+      "curPrice": 0.93,
+      "priceChangePct": -4.4
     },
     {
       "conditionId": "0xc5555fb5f7cbf3aad0a5a846a173bd811e11bbf939bcf09344be952fd2ab479b",
@@ -22756,13 +22756,13 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 452.562,
+          "exposure": 452.3204,
           "size": 483.2483,
           "avgPrice": 0.9604,
-          "curPrice": 0.9365
+          "curPrice": 0.936
         }
       ],
-      "totalExposure": 452.562,
+      "totalExposure": 452.3204,
       "change24h": 189.4,
       "avgEntry": 0.96,
       "curPrice": 0.94,
@@ -23347,13 +23347,13 @@
         {
           "address": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
           "label": "archaic",
-          "exposure": 425.4234,
+          "exposure": 425.6552,
           "size": 463.6767,
           "avgPrice": 0.9179,
-          "curPrice": 0.9175
+          "curPrice": 0.918
         }
       ],
-      "totalExposure": 425.4234,
+      "totalExposure": 425.6552,
       "change24h": 0,
       "avgEntry": 0.92,
       "curPrice": 0.92,
@@ -23725,13 +23725,13 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 400.077,
+          "exposure": 400.3477,
           "size": 541.3762,
           "avgPrice": 0.8686,
-          "curPrice": 0.739
+          "curPrice": 0.7395
         }
       ],
-      "totalExposure": 400.077,
+      "totalExposure": 400.3477,
       "change24h": 0,
       "avgEntry": 0.87,
       "curPrice": 0.74,
@@ -24030,13 +24030,13 @@
         {
           "address": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
           "label": "archaic",
-          "exposure": 381.6037,
+          "exposure": 381.4043,
           "size": 398.75,
           "avgPrice": 0.9751,
-          "curPrice": 0.957
+          "curPrice": 0.9565
         }
       ],
-      "totalExposure": 381.6037,
+      "totalExposure": 381.4043,
       "change24h": 0,
       "avgEntry": 0.98,
       "curPrice": 0.96,
@@ -24599,41 +24599,6 @@
       "priceChangePct": -26.9
     },
     {
-      "conditionId": "0xb6f9798af5a77bd36105be5663461aead7db6e4a1578ac06a6c504fa74e451f8",
-      "title": "Will Trump meet with Keir Starmer in January 2026?",
-      "slug": "will-trump-meet-with-keir-starmer-in-january-2026",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-trump-meet-with-keir-starmer-in-january-2026-y43NyfneWukk.jpg",
-      "eventSlug": "who-will-trump-meet-with-in-january",
-      "endDate": "2026-01-31",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 2,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
-          "label": "Car",
-          "exposure": 224.7684,
-          "size": 554.9838,
-          "avgPrice": 0.43,
-          "curPrice": 0.405
-        },
-        {
-          "address": "0x68c24bf4a8ad4d79a6fe4b8eec6f93a02dfd1711",
-          "label": "mombil",
-          "exposure": 106.0168,
-          "size": 261.77,
-          "avgPrice": 0.5314,
-          "curPrice": 0.405
-        }
-      ],
-      "totalExposure": 330.78520000000003,
-      "change24h": 0,
-      "avgEntry": 0.46,
-      "curPrice": 0.41,
-      "priceChangePct": -12.4
-    },
-    {
       "conditionId": "0x23481b811978194fa175143ed7cd8d0000878ca59c408fd552e33535f7aa771e",
       "title": "Will Donald Trump Jr. win the 2028 US Presidential Election?",
       "slug": "will-donald-trump-jr-win-the-2028-us-presidential-election",
@@ -24826,6 +24791,41 @@
       "avgEntry": 0.89,
       "curPrice": 0.91,
       "priceChangePct": 2.6
+    },
+    {
+      "conditionId": "0xb6f9798af5a77bd36105be5663461aead7db6e4a1578ac06a6c504fa74e451f8",
+      "title": "Will Trump meet with Keir Starmer in January 2026?",
+      "slug": "will-trump-meet-with-keir-starmer-in-january-2026",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-trump-meet-with-keir-starmer-in-january-2026-y43NyfneWukk.jpg",
+      "eventSlug": "who-will-trump-meet-with-in-january",
+      "endDate": "2026-01-31",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 2,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+          "label": "Car",
+          "exposure": 216.4437,
+          "size": 554.9838,
+          "avgPrice": 0.43,
+          "curPrice": 0.39
+        },
+        {
+          "address": "0x68c24bf4a8ad4d79a6fe4b8eec6f93a02dfd1711",
+          "label": "mombil",
+          "exposure": 102.0903,
+          "size": 261.77,
+          "avgPrice": 0.5314,
+          "curPrice": 0.39
+        }
+      ],
+      "totalExposure": 318.534,
+      "change24h": 0,
+      "avgEntry": 0.46,
+      "curPrice": 0.39,
+      "priceChangePct": -15.7
     },
     {
       "conditionId": "0xc00b7abbf9fea8e9858efd0bfe901bfb915e95aecffaed8361cd14460d599a35",
@@ -25230,6 +25230,33 @@
       "priceChangePct": 1030.2
     },
     {
+      "conditionId": "0xc4eaffc53f9052eefce589e4d84e7eff771d4655266c2f6ba056d9a6452a3044",
+      "title": "Will Trump talk to Volodymyr Zelenskyy in January?",
+      "slug": "will-trump-talk-to-volodymyr-zelenskyy-in-january",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-trump-meet-with-volodymyr-zelenskyy-in-his-first-100-days-vYpNOIDzf1IG.jpg",
+      "eventSlug": "who-will-trump-talk-to-in-january",
+      "endDate": "2026-01-31",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+          "label": "Car",
+          "exposure": 294.144,
+          "size": 554.9888,
+          "avgPrice": 0.75,
+          "curPrice": 0.53
+        }
+      ],
+      "totalExposure": 294.144,
+      "change24h": 0,
+      "avgEntry": 0.75,
+      "curPrice": 0.53,
+      "priceChangePct": -29.3
+    },
+    {
       "conditionId": "0x21ad31a46bfaa51650766eff6dc69c866959e32d965ffb116020e37694b6317d",
       "title": "Will Marco Rubio win the 2028 Republican presidential nomination?",
       "slug": "will-marco-rubio-win-the-2028-republican-presidential-nomination",
@@ -25309,33 +25336,6 @@
       "avgEntry": 0.79,
       "curPrice": 0.78,
       "priceChangePct": -2
-    },
-    {
-      "conditionId": "0xc4eaffc53f9052eefce589e4d84e7eff771d4655266c2f6ba056d9a6452a3044",
-      "title": "Will Trump talk to Volodymyr Zelenskyy in January?",
-      "slug": "will-trump-talk-to-volodymyr-zelenskyy-in-january",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-trump-meet-with-volodymyr-zelenskyy-in-his-first-100-days-vYpNOIDzf1IG.jpg",
-      "eventSlug": "who-will-trump-talk-to-in-january",
-      "endDate": "2026-01-31",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
-          "label": "Car",
-          "exposure": 288.5941,
-          "size": 554.9888,
-          "avgPrice": 0.75,
-          "curPrice": 0.52
-        }
-      ],
-      "totalExposure": 288.5941,
-      "change24h": 0,
-      "avgEntry": 0.75,
-      "curPrice": 0.52,
-      "priceChangePct": -30.7
     },
     {
       "conditionId": "0xc381b79b37b4d34ee7b7a54c0ab5f5d3c5a2a8cc67252d3010649aff1d377bd4",
@@ -25727,17 +25727,17 @@
         {
           "address": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
           "label": "archaic",
-          "exposure": 262.5668,
+          "exposure": 264.3408,
           "size": 354.82,
           "avgPrice": 0.5662,
-          "curPrice": 0.74
+          "curPrice": 0.745
         }
       ],
-      "totalExposure": 262.5668,
+      "totalExposure": 264.3408,
       "change24h": 0,
       "avgEntry": 0.57,
-      "curPrice": 0.74,
-      "priceChangePct": 30.7
+      "curPrice": 0.75,
+      "priceChangePct": 31.6
     },
     {
       "conditionId": "0xa6eec5f51ea76de37b7a25e5511c7ff19d301de27141ffc269c08230edf9ee52",
@@ -25789,17 +25789,17 @@
         {
           "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
           "label": "Car",
-          "exposure": 261.0691,
+          "exposure": 260.6507,
           "size": 278.92,
           "avgPrice": 0.9556,
-          "curPrice": 0.936
+          "curPrice": 0.9345
         }
       ],
-      "totalExposure": 261.0691,
+      "totalExposure": 260.6507,
       "change24h": 266.54,
       "avgEntry": 0.96,
-      "curPrice": 0.94,
-      "priceChangePct": -2.1
+      "curPrice": 0.93,
+      "priceChangePct": -2.2
     },
     {
       "conditionId": "0x939eeb2dea216749bd409bedde483c3f2bfb0e24d4f2d34461c0b21c6e91f010",
@@ -26277,33 +26277,6 @@
       "priceChangePct": -31.4
     },
     {
-      "conditionId": "0x58c721843501296a0330b5edfbd5b9f5529af7fc3296b2c4be45e4e026d41387",
-      "title": "Will the Indian National Congress (INC) win the most seats in the 2026 Kerala Legislative Assembly election?",
-      "slug": "will-the-indian-national-congress-inc-win-the-most-seats-in-the-2026-kerala-legislative-assembly-election",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-indian-national-congress-inc-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election-ftmXIVTX_5wU.png",
-      "eventSlug": "kerala-legislative-assembly-election-winner",
-      "endDate": "2026-05-23",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
-          "label": "archaic",
-          "exposure": 230.7852,
-          "size": 339.39,
-          "avgPrice": 0.6774,
-          "curPrice": 0.68
-        }
-      ],
-      "totalExposure": 230.7852,
-      "change24h": 0,
-      "avgEntry": 0.68,
-      "curPrice": 0.68,
-      "priceChangePct": 0.4
-    },
-    {
       "conditionId": "0x87091dc5932f015d80c40e71e47cb043c3f8b6098484eb5bc3943cf35ee9afc1",
       "title": "Will Kylian Mbappé win the 2026 Ballon d'Or?",
       "slug": "will-kylian-mbapp-win-the-2026-ballon-dor",
@@ -26364,6 +26337,33 @@
       "avgEntry": 0.73,
       "curPrice": 0.43,
       "priceChangePct": -41.3
+    },
+    {
+      "conditionId": "0x58c721843501296a0330b5edfbd5b9f5529af7fc3296b2c4be45e4e026d41387",
+      "title": "Will the Indian National Congress (INC) win the most seats in the 2026 Kerala Legislative Assembly election?",
+      "slug": "will-the-indian-national-congress-inc-win-the-most-seats-in-the-2026-kerala-legislative-assembly-election",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-indian-national-congress-inc-win-the-most-seats-in-the-2026-west-bengal-legislative-assembly-election-ftmXIVTX_5wU.png",
+      "eventSlug": "kerala-legislative-assembly-election-winner",
+      "endDate": "2026-05-23",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
+          "label": "archaic",
+          "exposure": 229.0882,
+          "size": 339.39,
+          "avgPrice": 0.6774,
+          "curPrice": 0.675
+        }
+      ],
+      "totalExposure": 229.0882,
+      "change24h": 0,
+      "avgEntry": 0.68,
+      "curPrice": 0.68,
+      "priceChangePct": -0.4
     },
     {
       "conditionId": "0x7412d284c8f63791fec807f9b1f61c6fe61163621775a3dc8686cd2575272abe",
@@ -27742,33 +27742,6 @@
       "priceChangePct": -40.7
     },
     {
-      "conditionId": "0x5fdb3370cb6d9d983320d5e07506656de0e5572d69422a41d8c5a3b7a62bbde7",
-      "title": "Trump invokes War Powers against Iran by March 31, 2026?",
-      "slug": "trump-invokes-war-powers-against-iran-by-march-31-2026",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/tt-6bb482b784.png",
-      "eventSlug": "trump-invokes-war-powers-against-iran-by",
-      "endDate": "2026-03-31",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 157.182,
-          "size": 498.9905,
-          "avgPrice": 0.428,
-          "curPrice": 0.315
-        }
-      ],
-      "totalExposure": 157.182,
-      "change24h": 0,
-      "avgEntry": 0.43,
-      "curPrice": 0.32,
-      "priceChangePct": -26.4
-    },
-    {
       "conditionId": "0xc2a5288cfb90005abfbf15b5c5fd963a891a1f41373c9f52797e10a6274de37f",
       "title": "Opinion FDV above $500M one day after launch?",
       "slug": "opinion-fdv-above-500m-one-day-after-launch",
@@ -27848,6 +27821,33 @@
       "avgEntry": 0.97,
       "curPrice": 0.99,
       "priceChangePct": 2.4
+    },
+    {
+      "conditionId": "0x5fdb3370cb6d9d983320d5e07506656de0e5572d69422a41d8c5a3b7a62bbde7",
+      "title": "Trump invokes War Powers against Iran by March 31, 2026?",
+      "slug": "trump-invokes-war-powers-against-iran-by-march-31-2026",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/tt-6bb482b784.png",
+      "eventSlug": "trump-invokes-war-powers-against-iran-by",
+      "endDate": "2026-03-31",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 149.6971,
+          "size": 498.9905,
+          "avgPrice": 0.428,
+          "curPrice": 0.3
+        }
+      ],
+      "totalExposure": 149.6971,
+      "change24h": 0,
+      "avgEntry": 0.43,
+      "curPrice": 0.3,
+      "priceChangePct": -29.9
     },
     {
       "conditionId": "0x50ddb9cd80d5c271664a2ebb7fcaed1d0a148d82c8e8d314d830f75a944c3dcc",
@@ -28260,6 +28260,33 @@
       "priceChangePct": -10.8
     },
     {
+      "conditionId": "0x6a12068003a55b0b1ac616484a30a073121ea81f82182ecfd6529821d1ff2174",
+      "title": "Will Silver hit 100 or Bitcoin hit 100k first?",
+      "slug": "will-silver-hit-100-or-bitcoin-hit-100k-first",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bitcoinsilver-30bbfde5a3.png",
+      "eventSlug": "will-silver-hit-100-or-bitcoin-hit-100k-first",
+      "endDate": "2026-12-31",
+      "outcome": "Bitcoin",
+      "outcomeIndex": 1,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 137.9966,
+          "size": 1199.971,
+          "avgPrice": 0.4149,
+          "curPrice": 0.115
+        }
+      ],
+      "totalExposure": 137.9966,
+      "change24h": 0,
+      "avgEntry": 0.41,
+      "curPrice": 0.12,
+      "priceChangePct": -72.3
+    },
+    {
       "conditionId": "0xf517aaa09c28b5b7394cdc6f6e33f8a4aab33c76c733a22084e667c2d1b9f2ce",
       "title": "U.S. x Russia Nuclear deal by February 4?",
       "slug": "us-x-russia-nuclear-deal-by-february-4",
@@ -28447,33 +28474,6 @@
       "avgEntry": 0.13,
       "curPrice": 0.01,
       "priceChangePct": -90.2
-    },
-    {
-      "conditionId": "0x6a12068003a55b0b1ac616484a30a073121ea81f82182ecfd6529821d1ff2174",
-      "title": "Will Silver hit 100 or Bitcoin hit 100k first?",
-      "slug": "will-silver-hit-100-or-bitcoin-hit-100k-first",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bitcoinsilver-30bbfde5a3.png",
-      "eventSlug": "will-silver-hit-100-or-bitcoin-hit-100k-first",
-      "endDate": "2026-12-31",
-      "outcome": "Bitcoin",
-      "outcomeIndex": 1,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 131.9968,
-          "size": 1199.971,
-          "avgPrice": 0.4149,
-          "curPrice": 0.11
-        }
-      ],
-      "totalExposure": 131.9968,
-      "change24h": 0,
-      "avgEntry": 0.41,
-      "curPrice": 0.11,
-      "priceChangePct": -73.5
     },
     {
       "conditionId": "0x98a00a768588cb4ea560143e9a4140428102c3b82e9dad2972329fc6806d36c9",
@@ -29175,17 +29175,17 @@
         {
           "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
           "label": "ArmageddonRewardsBilly",
-          "exposure": 113.0251,
+          "exposure": 112.194,
           "size": 1662.1339,
           "avgPrice": 0.0619,
-          "curPrice": 0.068
+          "curPrice": 0.0675
         }
       ],
-      "totalExposure": 113.0251,
+      "totalExposure": 112.194,
       "change24h": 0,
       "avgEntry": 0.06,
       "curPrice": 0.07,
-      "priceChangePct": 9.9
+      "priceChangePct": 9
     },
     {
       "conditionId": "0x06298d988d1062d0a96369a2846a3c85a2f4e2c4ca5c31d1bbfd0ac37d1c5d56",
@@ -30267,33 +30267,6 @@
       "priceChangePct": 37.1
     },
     {
-      "conditionId": "0x5c339ce01ad0759313b638e7efadc6f6d626b9766378e62cbd9d18f69ae68406",
-      "title": "Will 6 judges rule in favor of Trump's Tarriffs?",
-      "slug": "will-6-judges-rule-in-favor-of-trumps-tarriffs",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-scotus-justices-rule-in-favor-of-trumps-tarriffs-ysSaG6GurCGW.jpg",
-      "eventSlug": "how-many-scotus-justices-rule-in-favor-of-trumps-tarriffs",
-      "endDate": "1970-01-01",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 84.9978,
-          "size": 999.9752,
-          "avgPrice": 0.083,
-          "curPrice": 0.085
-        }
-      ],
-      "totalExposure": 84.9978,
-      "change24h": 0,
-      "avgEntry": 0.08,
-      "curPrice": 0.09,
-      "priceChangePct": 2.4
-    },
-    {
       "conditionId": "0xff1272373cfe52fe3c25e627c328e8851588b39ea1d6ab56bc41c0a327151cd1",
       "title": "Will Chase Infiniti win Best Supporting Actress at the 98th Academy Awards?",
       "slug": "will-chase-infiniti-win-best-supporting-actress-at-the-98th-academy-awards",
@@ -30321,33 +30294,6 @@
       "priceChangePct": -78.6
     },
     {
-      "conditionId": "0x285908f7d6ef04ca37e4650ebb8ba9b6d323bbe5ab3e33d8162a80906a552e5f",
-      "title": "Will the US strike Iran next?",
-      "slug": "will-the-us-strike-iran-next-433",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/next-country-us-strikes-33B5vAP0Ah_C.jpg",
-      "eventSlug": "next-country-us-strikes-918",
-      "endDate": "1970-01-01",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 82.6,
-          "size": 700,
-          "avgPrice": 0.0863,
-          "curPrice": 0.118
-        }
-      ],
-      "totalExposure": 82.6,
-      "change24h": -19,
-      "avgEntry": 0.09,
-      "curPrice": 0.12,
-      "priceChangePct": 36.7
-    },
-    {
       "conditionId": "0xfbd0a65112e26d9a2a68dc47f8a95c6c14d22650cb4837c5429b546726661b71",
       "title": "Will the Democrats win the Wisconsin governor race in 2026?",
       "slug": "will-the-democrats-win-the-wisconsin-governor-race-in-2026",
@@ -30373,6 +30319,33 @@
       "avgEntry": 0.64,
       "curPrice": 0.73,
       "priceChangePct": 13.3
+    },
+    {
+      "conditionId": "0x285908f7d6ef04ca37e4650ebb8ba9b6d323bbe5ab3e33d8162a80906a552e5f",
+      "title": "Will the US strike Iran next?",
+      "slug": "will-the-us-strike-iran-next-433",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/next-country-us-strikes-33B5vAP0Ah_C.jpg",
+      "eventSlug": "next-country-us-strikes-918",
+      "endDate": "1970-01-01",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 81.55,
+          "size": 700,
+          "avgPrice": 0.0863,
+          "curPrice": 0.1165
+        }
+      ],
+      "totalExposure": 81.55,
+      "change24h": -19,
+      "avgEntry": 0.09,
+      "curPrice": 0.12,
+      "priceChangePct": 35
     },
     {
       "conditionId": "0x22ebefd1cba27c5419e6a15cfb72e9d1fc603f4e46b1dfcb55d1f72df3ab8e18",
@@ -30435,6 +30408,33 @@
       "avgEntry": 0.19,
       "curPrice": 0.05,
       "priceChangePct": -72.1
+    },
+    {
+      "conditionId": "0x5c339ce01ad0759313b638e7efadc6f6d626b9766378e62cbd9d18f69ae68406",
+      "title": "Will 6 judges rule in favor of Trump's Tarriffs?",
+      "slug": "will-6-judges-rule-in-favor-of-trumps-tarriffs",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-scotus-justices-rule-in-favor-of-trumps-tarriffs-ysSaG6GurCGW.jpg",
+      "eventSlug": "how-many-scotus-justices-rule-in-favor-of-trumps-tarriffs",
+      "endDate": "1970-01-01",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 79.998,
+          "size": 999.9752,
+          "avgPrice": 0.083,
+          "curPrice": 0.08
+        }
+      ],
+      "totalExposure": 79.998,
+      "change24h": 0,
+      "avgEntry": 0.08,
+      "curPrice": 0.08,
+      "priceChangePct": -3.6
     },
     {
       "conditionId": "0x30cfb887558b20373a984da60c372fe5a90c0296aa6d8bb413a8aa7543846da2",
@@ -31833,33 +31833,6 @@
       "priceChangePct": -96.6
     },
     {
-      "conditionId": "0x9d126ca2404a3bc1624f53eb4fc9fd7b0cd41c144a60b26b5a48a0f134b17a57",
-      "title": "Will Alex Honnold free solo Taipei 101 in between 2 hours and 2 hours and 15 minutes?",
-      "slug": "will-alex-honnold-free-solo-taipei-101-in-between-2-hours-and-2-hours-and-15-minutes-638-582",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-long-will-it-take-alex-honnold-to-free-solo-taipei-101-sVnyRt8wRFGj.jpg",
-      "eventSlug": "how-long-will-it-take-alex-honnold-to-free-solo-taipei-101",
-      "endDate": "2026-01-23",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 55.2523,
-          "size": 1241.6258,
-          "avgPrice": 0.0743,
-          "curPrice": 0.0445
-        }
-      ],
-      "totalExposure": 55.2523,
-      "change24h": 0,
-      "avgEntry": 0.07,
-      "curPrice": 0.04,
-      "priceChangePct": -40.1
-    },
-    {
       "conditionId": "0xe9674aadfabfa7171bcee4e38b66f1a7d7e0af538d3718301e7b3cf111e9b5dd",
       "title": "Will OpenAI launch a new consumer hardware product by March 31, 2026?",
       "slug": "will-openai-launch-a-new-consumer-hardware-product-by-march-31-2026",
@@ -31941,33 +31914,6 @@
       "priceChangePct": -5.2
     },
     {
-      "conditionId": "0x4dc83876f4e36b4e41bc897c42c7b791d3baead9e41d6e916663cc801db33c0c",
-      "title": "Will Walmart acquire TikTok?",
-      "slug": "will-walmart-acquire-tiktok-688-757-314",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-walmart-acquire-tiktok-688-757-314-hSjDhH7Y7O_o.png",
-      "eventSlug": "who-will-acquire-tiktok-559",
-      "endDate": "2026-12-31",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
-          "label": "Car",
-          "exposure": 54.8772,
-          "size": 1483.17,
-          "avgPrice": 0.0206,
-          "curPrice": 0.037
-        }
-      ],
-      "totalExposure": 54.8772,
-      "change24h": 0,
-      "avgEntry": 0.02,
-      "curPrice": 0.04,
-      "priceChangePct": 79.6
-    },
-    {
       "conditionId": "0x90e83bc1dfd11d23f5855af7bb020785fef49f93735628705e32b1a666d38d40",
       "title": "Cilia Flores released from custody by December 31, 2026?",
       "slug": "cilia-flores-released-from-custody-by-december-31-2026",
@@ -31993,6 +31939,33 @@
       "avgEntry": 0.32,
       "curPrice": 0.22,
       "priceChangePct": -30.8
+    },
+    {
+      "conditionId": "0x9d126ca2404a3bc1624f53eb4fc9fd7b0cd41c144a60b26b5a48a0f134b17a57",
+      "title": "Will Alex Honnold free solo Taipei 101 in between 2 hours and 2 hours and 15 minutes?",
+      "slug": "will-alex-honnold-free-solo-taipei-101-in-between-2-hours-and-2-hours-and-15-minutes-638-582",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-long-will-it-take-alex-honnold-to-free-solo-taipei-101-sVnyRt8wRFGj.jpg",
+      "eventSlug": "how-long-will-it-take-alex-honnold-to-free-solo-taipei-101",
+      "endDate": "2026-01-23",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+          "label": "ArmageddonRewardsBilly",
+          "exposure": 54.6315,
+          "size": 1241.6258,
+          "avgPrice": 0.0743,
+          "curPrice": 0.044
+        }
+      ],
+      "totalExposure": 54.6315,
+      "change24h": 0,
+      "avgEntry": 0.07,
+      "curPrice": 0.04,
+      "priceChangePct": -40.8
     },
     {
       "conditionId": "0x57daa520ae47dc77352fe7387adf820c4ab58d46d9ffb814849ef5e672e1322a",
@@ -32076,6 +32049,33 @@
       "priceChangePct": -66.1
     },
     {
+      "conditionId": "0x4dc83876f4e36b4e41bc897c42c7b791d3baead9e41d6e916663cc801db33c0c",
+      "title": "Will Walmart acquire TikTok?",
+      "slug": "will-walmart-acquire-tiktok-688-757-314",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-walmart-acquire-tiktok-688-757-314-hSjDhH7Y7O_o.png",
+      "eventSlug": "who-will-acquire-tiktok-559",
+      "endDate": "2026-12-31",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+          "label": "Car",
+          "exposure": 54.1357,
+          "size": 1483.17,
+          "avgPrice": 0.0206,
+          "curPrice": 0.0365
+        }
+      ],
+      "totalExposure": 54.1357,
+      "change24h": 0,
+      "avgEntry": 0.02,
+      "curPrice": 0.04,
+      "priceChangePct": 77.2
+    },
+    {
       "conditionId": "0x5caf6459052e0fcc736c368f97b5ea98e6bf264507f2e94ac8d69fcc441b1bae",
       "title": "Ukraine agrees not to join NATO before 2027? ",
       "slug": "ukraine-agrees-not-to-join-nato-before-2027",
@@ -32101,60 +32101,6 @@
       "avgEntry": 0.57,
       "curPrice": 0.76,
       "priceChangePct": 33.4
-    },
-    {
-      "conditionId": "0x23862cc33d499e4f93c0fba6e64a4db04d4a83ac5f180458e3d13b97cb9c78d0",
-      "title": "Will Tempo launch a token by June 30 2026?",
-      "slug": "will-tempo-launch-a-token-by-june-30-2026",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-tempo-launch-a-token-by-PZhG3ytiEP4M.png",
-      "eventSlug": "will-tempo-launch-a-token-by",
-      "endDate": "2027-01-01",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xdd225a03cd7ed89e3931906c67c75ab31cf89ef1",
-          "label": "Euan",
-          "exposure": 53.37,
-          "size": 148.25,
-          "avgPrice": 0.3286,
-          "curPrice": 0.36
-        }
-      ],
-      "totalExposure": 53.37,
-      "change24h": 0,
-      "avgEntry": 0.33,
-      "curPrice": 0.36,
-      "priceChangePct": 9.6
-    },
-    {
-      "conditionId": "0xde14fc9797802d16463b0b70ff0c1a571396bdba64b3d205f83b0f7787481235",
-      "title": "Will Alex Honnold free solo Taipei 101 in between 1 hour and 45 minutes and 2 hours?",
-      "slug": "will-alex-honnold-free-solo-taipei-101-in-between-1-hour-and-45-minutes-and-2-hours-578-355",
-      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-long-will-it-take-alex-honnold-to-free-solo-taipei-101-sVnyRt8wRFGj.jpg",
-      "eventSlug": "how-long-will-it-take-alex-honnold-to-free-solo-taipei-101",
-      "endDate": "2026-01-23",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "traderCount": 1,
-      "traderCountChange": 0,
-      "traders": [
-        {
-          "address": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-          "label": "ArmageddonRewardsBilly",
-          "exposure": 53.1205,
-          "size": 957.1262,
-          "avgPrice": 0.0819,
-          "curPrice": 0.0555
-        }
-      ],
-      "totalExposure": 53.1205,
-      "change24h": 0,
-      "avgEntry": 0.08,
-      "curPrice": 0.06,
-      "priceChangePct": -32.2
     },
     {
       "conditionId": "0x331ef908bdfd259bb5e6b018c9beb9323224b54c1a53aeeea6d2363de19426f6",
@@ -32217,6 +32163,33 @@
       "avgEntry": 0.2,
       "curPrice": 0.04,
       "priceChangePct": -81.4
+    },
+    {
+      "conditionId": "0x23862cc33d499e4f93c0fba6e64a4db04d4a83ac5f180458e3d13b97cb9c78d0",
+      "title": "Will Tempo launch a token by June 30 2026?",
+      "slug": "will-tempo-launch-a-token-by-june-30-2026",
+      "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-tempo-launch-a-token-by-PZhG3ytiEP4M.png",
+      "eventSlug": "will-tempo-launch-a-token-by",
+      "endDate": "2027-01-01",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "traderCount": 1,
+      "traderCountChange": 0,
+      "traders": [
+        {
+          "address": "0xdd225a03cd7ed89e3931906c67c75ab31cf89ef1",
+          "label": "Euan",
+          "exposure": 52.6287,
+          "size": 148.25,
+          "avgPrice": 0.3286,
+          "curPrice": 0.355
+        }
+      ],
+      "totalExposure": 52.6287,
+      "change24h": 0,
+      "avgEntry": 0.33,
+      "curPrice": 0.36,
+      "priceChangePct": 8
     },
     {
       "conditionId": "0x184e4a8f7cae608a3a54505dd2c075a9f59c1fdb8150c87195a6f586185efd7c",
@@ -32433,12 +32406,12 @@
     }
   ],
   "summary": {
-    "totalExposure": 14364159.907699993,
-    "totalCapital": 15356376.22,
-    "relativeExposure": 93.54,
+    "totalExposure": 14364067.259,
+    "totalCapital": 15373388.8,
+    "relativeExposure": 93.43,
     "distinctMarkets": 3182,
     "top1Share": 0.29,
     "top5Share": 0.64,
-    "netFlow24h": 2957954.92
+    "netFlow24h": 2958335.85
   }
 }

@@ -1,6 +1,21 @@
 {
   "changes": [
     {
+      "timestamp": 1768953924,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Tabi FDV above $500M one day after launch?",
+      "marketSlug": "tabi-fdv-above-500m-one-day-after-launch",
+      "eventSlug": "tabi-fdv-above-one-day-after-launch",
+      "conditionId": "0xf7fbeee415a4c341bbeb81e0fe8c2891a608f26c9f9a4e492e7fbb2e395a7008",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": -105.57,
+      "size": 137.1,
+      "price": 0.77
+    },
+    {
       "timestamp": 1768953880,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
@@ -3257,6 +3272,36 @@
     },
     {
       "timestamp": 1768949642,
+      "trader": "Dropper",
+      "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
+      "market": "Will Netflix say \"Warner Bros\" during earnings call?",
+      "marketSlug": "earnings-mentions-netflix-2026-01-20-warner-bros-1-times",
+      "eventSlug": "earnings-mentions-netflix-2026-01-20",
+      "conditionId": "0x3afaa6c9c9487ab0eff39abb4e93be2647afcb4069e1ce8e6af5cca37de14438",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 2033.13,
+      "size": 3333,
+      "price": 0.61
+    },
+    {
+      "timestamp": 1768949642,
+      "trader": "Dropper",
+      "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
+      "market": "Will Netflix say \"Warner Bros\" during earnings call?",
+      "marketSlug": "earnings-mentions-netflix-2026-01-20-warner-bros-1-times",
+      "eventSlug": "earnings-mentions-netflix-2026-01-20",
+      "conditionId": "0x3afaa6c9c9487ab0eff39abb4e93be2647afcb4069e1ce8e6af5cca37de14438",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 2777.5,
+      "size": 5555,
+      "price": 0.5
+    },
+    {
+      "timestamp": 1768949642,
       "trader": "TheWolfOfPoly",
       "traderAddress": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
       "market": "Will Netflix say \"Warner Bros\" during earnings call?",
@@ -3344,36 +3389,6 @@
       "delta": 7.69,
       "size": 23.17,
       "price": 0.332
-    },
-    {
-      "timestamp": 1768949642,
-      "trader": "Dropper",
-      "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
-      "market": "Will Netflix say \"Warner Bros\" during earnings call?",
-      "marketSlug": "earnings-mentions-netflix-2026-01-20-warner-bros-1-times",
-      "eventSlug": "earnings-mentions-netflix-2026-01-20",
-      "conditionId": "0x3afaa6c9c9487ab0eff39abb4e93be2647afcb4069e1ce8e6af5cca37de14438",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 2033.13,
-      "size": 3333,
-      "price": 0.61
-    },
-    {
-      "timestamp": 1768949642,
-      "trader": "Dropper",
-      "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
-      "market": "Will Netflix say \"Warner Bros\" during earnings call?",
-      "marketSlug": "earnings-mentions-netflix-2026-01-20-warner-bros-1-times",
-      "eventSlug": "earnings-mentions-netflix-2026-01-20",
-      "conditionId": "0x3afaa6c9c9487ab0eff39abb4e93be2647afcb4069e1ce8e6af5cca37de14438",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 2777.5,
-      "size": 5555,
-      "price": 0.5
     },
     {
       "timestamp": 1768949630,
@@ -3617,21 +3632,6 @@
     },
     {
       "timestamp": 1768949410,
-      "trader": "TheWolfOfPoly",
-      "traderAddress": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
-      "market": "Will Netflix say \"Warner Bros\" during earnings call?",
-      "marketSlug": "earnings-mentions-netflix-2026-01-20-warner-bros-1-times",
-      "eventSlug": "earnings-mentions-netflix-2026-01-20",
-      "conditionId": "0x3afaa6c9c9487ab0eff39abb4e93be2647afcb4069e1ce8e6af5cca37de14438",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 198.58,
-      "size": 325,
-      "price": 0.611
-    },
-    {
-      "timestamp": 1768949410,
       "trader": "Dropper",
       "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
       "market": "Will Netflix say \"Warner Bros\" during earnings call?",
@@ -3644,6 +3644,21 @@
       "delta": 2033.13,
       "size": 3333,
       "price": 0.61
+    },
+    {
+      "timestamp": 1768949410,
+      "trader": "TheWolfOfPoly",
+      "traderAddress": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
+      "market": "Will Netflix say \"Warner Bros\" during earnings call?",
+      "marketSlug": "earnings-mentions-netflix-2026-01-20-warner-bros-1-times",
+      "eventSlug": "earnings-mentions-netflix-2026-01-20",
+      "conditionId": "0x3afaa6c9c9487ab0eff39abb4e93be2647afcb4069e1ce8e6af5cca37de14438",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 198.58,
+      "size": 325,
+      "price": 0.611
     },
     {
       "timestamp": 1768949406,
@@ -3692,21 +3707,6 @@
     },
     {
       "timestamp": 1768949350,
-      "trader": "Trader_0x4337",
-      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
-      "market": "Will Olympiakós SFP win on 2026-01-20?",
-      "marketSlug": "ucl-oly-lev2-2026-01-20-oly",
-      "eventSlug": "ucl-oly-lev2-2026-01-20",
-      "conditionId": "0xea996ad78f60e2406a354aaa32aa78ca8642dc496f61c9afca6402acd972b16a",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "decreased",
-      "delta": -0.57,
-      "size": 574.71,
-      "price": 0.001
-    },
-    {
-      "timestamp": 1768949350,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
       "market": "Will Trump’s Greenland Tariffs go into effect for Norway by Feburary 1?",
@@ -3719,6 +3719,21 @@
       "delta": 9.6,
       "size": 38.39,
       "price": 0.25
+    },
+    {
+      "timestamp": 1768949350,
+      "trader": "Trader_0x4337",
+      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
+      "market": "Will Olympiakós SFP win on 2026-01-20?",
+      "marketSlug": "ucl-oly-lev2-2026-01-20-oly",
+      "eventSlug": "ucl-oly-lev2-2026-01-20",
+      "conditionId": "0xea996ad78f60e2406a354aaa32aa78ca8642dc496f61c9afca6402acd972b16a",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": -0.57,
+      "size": 574.71,
+      "price": 0.001
     },
     {
       "timestamp": 1768949330,
@@ -4532,21 +4547,6 @@
     },
     {
       "timestamp": 1768948554,
-      "trader": "Trader_0x4337",
-      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
-      "market": "Will Olympiakós SFP win on 2026-01-20?",
-      "marketSlug": "ucl-oly-lev2-2026-01-20-oly",
-      "eventSlug": "ucl-oly-lev2-2026-01-20",
-      "conditionId": "0xea996ad78f60e2406a354aaa32aa78ca8642dc496f61c9afca6402acd972b16a",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "decreased",
-      "delta": 0,
-      "size": 0.01,
-      "price": 0.001
-    },
-    {
-      "timestamp": 1768948554,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
       "market": "Jerome Powell out as Fed Chair by March 31, 2026?",
@@ -4574,6 +4574,21 @@
       "delta": 13.95,
       "size": 15,
       "price": 0.93
+    },
+    {
+      "timestamp": 1768948554,
+      "trader": "Trader_0x4337",
+      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
+      "market": "Will Olympiakós SFP win on 2026-01-20?",
+      "marketSlug": "ucl-oly-lev2-2026-01-20-oly",
+      "eventSlug": "ucl-oly-lev2-2026-01-20",
+      "conditionId": "0xea996ad78f60e2406a354aaa32aa78ca8642dc496f61c9afca6402acd972b16a",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "decreased",
+      "delta": 0,
+      "size": 0.01,
+      "price": 0.001
     },
     {
       "timestamp": 1768948550,
@@ -6212,21 +6227,6 @@
     },
     {
       "timestamp": 1768947206,
-      "trader": "Trader_0x4337",
-      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
-      "market": "Will Villarreal CF win on 2026-01-20?",
-      "marketSlug": "ucl-vil1-aja-2026-01-20-vil1",
-      "eventSlug": "ucl-vil1-aja-2026-01-20",
-      "conditionId": "0xdece3c9a32a0244f9dc4622feadd31f74dec86b02399454db743cc59a5e23eb2",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 134.87,
-      "size": 135,
-      "price": 0.999
-    },
-    {
-      "timestamp": 1768947206,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
       "market": "Will Alex Honnold free solo Taipei 101 in between 2 hours and 15 minutes and 2 hours and 30 minutes?",
@@ -6239,6 +6239,21 @@
       "delta": 0.26,
       "size": 13,
       "price": 0.02
+    },
+    {
+      "timestamp": 1768947206,
+      "trader": "Trader_0x4337",
+      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
+      "market": "Will Villarreal CF win on 2026-01-20?",
+      "marketSlug": "ucl-vil1-aja-2026-01-20-vil1",
+      "eventSlug": "ucl-vil1-aja-2026-01-20",
+      "conditionId": "0xdece3c9a32a0244f9dc4622feadd31f74dec86b02399454db743cc59a5e23eb2",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 134.87,
+      "size": 135,
+      "price": 0.999
     },
     {
       "timestamp": 1768947198,
@@ -7607,21 +7622,6 @@
     },
     {
       "timestamp": 1768946822,
-      "trader": "Trader_0x4337",
-      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
-      "market": "Will Villarreal CF win on 2026-01-20?",
-      "marketSlug": "ucl-vil1-aja-2026-01-20-vil1",
-      "eventSlug": "ucl-vil1-aja-2026-01-20",
-      "conditionId": "0xdece3c9a32a0244f9dc4622feadd31f74dec86b02399454db743cc59a5e23eb2",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 16.64,
-      "size": 16.66,
-      "price": 0.999
-    },
-    {
-      "timestamp": 1768946822,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
       "market": "Khamenei out as Supreme Leader of Iran by January 31?",
@@ -7634,6 +7634,21 @@
       "delta": 93,
       "size": 100,
       "price": 0.93
+    },
+    {
+      "timestamp": 1768946822,
+      "trader": "Trader_0x4337",
+      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
+      "market": "Will Villarreal CF win on 2026-01-20?",
+      "marketSlug": "ucl-vil1-aja-2026-01-20-vil1",
+      "eventSlug": "ucl-vil1-aja-2026-01-20",
+      "conditionId": "0xdece3c9a32a0244f9dc4622feadd31f74dec86b02399454db743cc59a5e23eb2",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 16.64,
+      "size": 16.66,
+      "price": 0.999
     },
     {
       "timestamp": 1768946822,
@@ -14012,21 +14027,6 @@
     },
     {
       "timestamp": 1768942916,
-      "trader": "ImJustKen",
-      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
-      "market": "Will anyone be charged over Daycare fraud in Minnesota by January 31?",
-      "marketSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota",
-      "eventSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota-by",
-      "conditionId": "0xceaaf9303fe9f12febbb8c11ea834422c0ac0a81e730af7753143895bb3bca21",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 2.59,
-      "size": 2.78,
-      "price": 0.93
-    },
-    {
-      "timestamp": 1768942916,
       "trader": "Car",
       "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
       "market": "Bitcoin Up or Down - January 20, 3PM ET",
@@ -14039,6 +14039,21 @@
       "delta": 14,
       "size": 20,
       "price": 0.7
+    },
+    {
+      "timestamp": 1768942916,
+      "trader": "ImJustKen",
+      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "market": "Will anyone be charged over Daycare fraud in Minnesota by January 31?",
+      "marketSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota",
+      "eventSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota-by",
+      "conditionId": "0xceaaf9303fe9f12febbb8c11ea834422c0ac0a81e730af7753143895bb3bca21",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 2.59,
+      "size": 2.78,
+      "price": 0.93
     },
     {
       "timestamp": 1768942914,
@@ -14387,21 +14402,6 @@
     },
     {
       "timestamp": 1768942832,
-      "trader": "ImJustKen",
-      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
-      "market": "Russia x Ukraine ceasefire by January 31, 2026?",
-      "marketSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
-      "eventSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
-      "conditionId": "0xb8c1bd306a8a4cedfb280e114e655c5092b3f37edccae05cd877d7f21a5774ce",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "decreased",
-      "delta": -5,
-      "size": 555.555555,
-      "price": 0.008999998208999998
-    },
-    {
-      "timestamp": 1768942832,
       "trader": "Car",
       "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
       "market": "Bitcoin Up or Down - January 20, 3PM ET",
@@ -14414,6 +14414,21 @@
       "delta": 20.91,
       "size": 51,
       "price": 0.41
+    },
+    {
+      "timestamp": 1768942832,
+      "trader": "ImJustKen",
+      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "market": "Russia x Ukraine ceasefire by January 31, 2026?",
+      "marketSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
+      "eventSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
+      "conditionId": "0xb8c1bd306a8a4cedfb280e114e655c5092b3f37edccae05cd877d7f21a5774ce",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "decreased",
+      "delta": -5,
+      "size": 555.555555,
+      "price": 0.008999998208999998
     },
     {
       "timestamp": 1768942828,
@@ -14657,21 +14672,6 @@
     },
     {
       "timestamp": 1768942810,
-      "trader": "ImJustKen",
-      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
-      "market": "Russia x Ukraine ceasefire by January 31, 2026?",
-      "marketSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
-      "eventSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
-      "conditionId": "0xb8c1bd306a8a4cedfb280e114e655c5092b3f37edccae05cd877d7f21a5774ce",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "decreased",
-      "delta": -0.49,
-      "size": 55,
-      "price": 0.009
-    },
-    {
-      "timestamp": 1768942810,
       "trader": "Car",
       "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
       "market": "Bitcoin Up or Down - January 20, 3PM ET",
@@ -14714,6 +14714,21 @@
       "delta": 2.52,
       "size": 12,
       "price": 0.21
+    },
+    {
+      "timestamp": 1768942810,
+      "trader": "ImJustKen",
+      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "market": "Russia x Ukraine ceasefire by January 31, 2026?",
+      "marketSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
+      "eventSlug": "russia-x-ukraine-ceasefire-by-january-31-2026",
+      "conditionId": "0xb8c1bd306a8a4cedfb280e114e655c5092b3f37edccae05cd877d7f21a5774ce",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "decreased",
+      "delta": -0.49,
+      "size": 55,
+      "price": 0.009
     },
     {
       "timestamp": 1768942810,
@@ -14957,6 +14972,21 @@
     },
     {
       "timestamp": 1768942780,
+      "trader": "Car",
+      "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+      "market": "Ukraine signs peace deal with Russia by January 31?",
+      "marketSlug": "ukraine-signs-peace-deal-with-russia-by-january-31",
+      "eventSlug": "ukraine-signs-peace-deal-with-russia-by-january-31",
+      "conditionId": "0x9bd3c971a382cf9ee28afc6069295048c1e67299c81bed15cb552ebe7d33ce82",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 0.17,
+      "size": 5.170606,
+      "price": 0.033000000386801856
+    },
+    {
+      "timestamp": 1768942780,
       "trader": "ImJustKen",
       "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
       "market": "Russia x Ukraine ceasefire by January 31, 2026?",
@@ -14984,21 +15014,6 @@
       "delta": 6.43,
       "size": 6.91,
       "price": 0.93
-    },
-    {
-      "timestamp": 1768942780,
-      "trader": "Car",
-      "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
-      "market": "Ukraine signs peace deal with Russia by January 31?",
-      "marketSlug": "ukraine-signs-peace-deal-with-russia-by-january-31",
-      "eventSlug": "ukraine-signs-peace-deal-with-russia-by-january-31",
-      "conditionId": "0x9bd3c971a382cf9ee28afc6069295048c1e67299c81bed15cb552ebe7d33ce82",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 0.17,
-      "size": 5.170606,
-      "price": 0.033000000386801856
     },
     {
       "timestamp": 1768942780,
@@ -16247,21 +16262,6 @@
     },
     {
       "timestamp": 1768942036,
-      "trader": "ImJustKen",
-      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
-      "market": "Will anyone be charged over Daycare fraud in Minnesota by January 31?",
-      "marketSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota",
-      "eventSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota-by",
-      "conditionId": "0xceaaf9303fe9f12febbb8c11ea834422c0ac0a81e730af7753143895bb3bca21",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 2.59,
-      "size": 2.78,
-      "price": 0.93
-    },
-    {
-      "timestamp": 1768942036,
       "trader": "Car",
       "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
       "market": "Ukraine signs peace deal with Russia by January 31?",
@@ -16274,6 +16274,21 @@
       "delta": 21.08,
       "size": 638.67,
       "price": 0.033
+    },
+    {
+      "timestamp": 1768942036,
+      "trader": "ImJustKen",
+      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "market": "Will anyone be charged over Daycare fraud in Minnesota by January 31?",
+      "marketSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota",
+      "eventSlug": "will-anyone-be-charged-over-daycare-fraud-in-minnesota-by",
+      "conditionId": "0xceaaf9303fe9f12febbb8c11ea834422c0ac0a81e730af7753143895bb3bca21",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 2.59,
+      "size": 2.78,
+      "price": 0.93
     },
     {
       "timestamp": 1768941996,
@@ -20042,21 +20057,6 @@
     },
     {
       "timestamp": 1768938432,
-      "trader": "Trader_0x4337",
-      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
-      "market": "Will Olympiakós SFP win on 2026-01-20?",
-      "marketSlug": "ucl-oly-lev2-2026-01-20-oly",
-      "eventSlug": "ucl-oly-lev2-2026-01-20",
-      "conditionId": "0xea996ad78f60e2406a354aaa32aa78ca8642dc496f61c9afca6402acd972b16a",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 10577.28,
-      "size": 18888,
-      "price": 0.56
-    },
-    {
-      "timestamp": 1768938432,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
       "market": "Will the Republican Party hold exactly 50 Senate seats after the 2026 midterm elections?",
@@ -20069,6 +20069,21 @@
       "delta": -85,
       "size": 100,
       "price": 0.85
+    },
+    {
+      "timestamp": 1768938432,
+      "trader": "Trader_0x4337",
+      "traderAddress": "0x43372356634781eea88d61bbdd7824cdce958882",
+      "market": "Will Olympiakós SFP win on 2026-01-20?",
+      "marketSlug": "ucl-oly-lev2-2026-01-20-oly",
+      "eventSlug": "ucl-oly-lev2-2026-01-20",
+      "conditionId": "0xea996ad78f60e2406a354aaa32aa78ca8642dc496f61c9afca6402acd972b16a",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 10577.28,
+      "size": 18888,
+      "price": 0.56
     },
     {
       "timestamp": 1768938426,
@@ -23416,21 +23431,6 @@
       "price": 0.74
     },
     {
-      "timestamp": 1768935078,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Grok 4.20 released by April 20?",
-      "marketSlug": "grok-4pt20-released-by-april-20-988",
-      "eventSlug": "grok-4pt20-released-by",
-      "conditionId": "0x9a4fc026cc00ea95a9f40590dbc5a1c60db93b9f11a104163d8fcd2398f8174b",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "decreased",
-      "delta": -486.5,
-      "size": 500,
-      "price": 0.973
-    },
-    {
       "timestamp": 1768934962,
       "trader": "ImJustKen",
       "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
@@ -23552,21 +23552,6 @@
     },
     {
       "timestamp": 1768934092,
-      "trader": "ImJustKen",
-      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
-      "market": "Will Russia capture Lyman by March 31, 2026?",
-      "marketSlug": "will-russia-capture-lyman-by-march-31-2026",
-      "eventSlug": "will-russia-capture-lyman-in-2025",
-      "conditionId": "0x309ae759aefeb898fbc17881e16b796aceb3ce7ee99d077bae89f46904ef3635",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 1,
-      "size": 2,
-      "price": 0.5
-    },
-    {
-      "timestamp": 1768934092,
       "trader": "Car",
       "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
       "market": "Will anyone audibly fart during Trump's WEF 2026 speech?",
@@ -23579,6 +23564,21 @@
       "delta": 2893.18,
       "size": 3000,
       "price": 0.9643946066666667
+    },
+    {
+      "timestamp": 1768934092,
+      "trader": "ImJustKen",
+      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "market": "Will Russia capture Lyman by March 31, 2026?",
+      "marketSlug": "will-russia-capture-lyman-by-march-31-2026",
+      "eventSlug": "will-russia-capture-lyman-in-2025",
+      "conditionId": "0x309ae759aefeb898fbc17881e16b796aceb3ce7ee99d077bae89f46904ef3635",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 1,
+      "size": 2,
+      "price": 0.5
     },
     {
       "timestamp": 1768934090,
@@ -29387,21 +29387,6 @@
     },
     {
       "timestamp": 1768921742,
-      "trader": "ImJustKen",
-      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
-      "market": "Supreme Court rules in favor of Trump's tariffs?",
-      "marketSlug": "will-the-supreme-court-rule-in-favor-of-trumps-tariffs",
-      "eventSlug": "will-the-supreme-court-rule-in-favor-of-trumps-tariffs",
-      "conditionId": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 1977,
-      "size": 6408.37,
-      "price": 0.3085031607101338
-    },
-    {
-      "timestamp": 1768921742,
       "trader": "Car",
       "traderAddress": "0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
       "market": "Will the Supreme Court rule on Trump's tarriffs by January 31?",
@@ -29414,6 +29399,21 @@
       "delta": -57.65,
       "size": 68.63,
       "price": 0.84
+    },
+    {
+      "timestamp": 1768921742,
+      "trader": "ImJustKen",
+      "traderAddress": "0x9d84ce0306f8551e02efef1680475fc0f1dc1344",
+      "market": "Supreme Court rules in favor of Trump's tariffs?",
+      "marketSlug": "will-the-supreme-court-rule-in-favor-of-trumps-tariffs",
+      "eventSlug": "will-the-supreme-court-rule-in-favor-of-trumps-tariffs",
+      "conditionId": "0xb1d2cd56624ec8bb3d8115d50d503d0e8578bf32d754ad5fe3c0e08a73186c57",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 1977,
+      "size": 6408.37,
+      "price": 0.3085031607101338
     },
     {
       "timestamp": 1768921720,
@@ -29597,10 +29597,10 @@
     }
   ],
   "windowSummaries": {
-    "1h": 76121.17,
-    "6h": 2251410.94,
-    "24h": 2957954.92,
-    "7d": 2957954.92,
-    "30d": 2957954.92
+    "1h": 75849.53,
+    "6h": 2225186.47,
+    "24h": 2958335.85,
+    "7d": 2958335.85,
+    "30d": 2958335.85
   }
 }
