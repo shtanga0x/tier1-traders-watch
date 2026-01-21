@@ -241,9 +241,17 @@ function sortPositions(positions) {
         aVal = a.totalExposure || 0;
         bVal = b.totalExposure || 0;
         break;
-      case 'change24h':
-        aVal = a.change24h || 0;
-        bVal = b.change24h || 0;
+      case 'change1h':
+        aVal = a._change1h || 0;
+        bVal = b._change1h || 0;
+        break;
+      case 'change1d':
+        aVal = a._change1d || 0;
+        bVal = b._change1d || 0;
+        break;
+      case 'change1w':
+        aVal = a._change1w || 0;
+        bVal = b._change1w || 0;
         break;
       case 'endDate':
         aVal = parseExpirationDate(a.endDate);
@@ -347,7 +355,9 @@ function renderPortfolioTable() {
         <th class="sortable" onclick="handlePortfolioSort('traderCount')">Traders${getSortIndicator('traderCount')}</th>
         <th class="sortable" onclick="handlePortfolioSort('totalExposure')">Exposure${getSortIndicator('totalExposure')}</th>
         <th>% Alloc</th>
-        <th class="sortable" onclick="handlePortfolioSort('change24h')">24h Change${getSortIndicator('change24h')}</th>
+        <th class="sortable tooltip-header" onclick="handlePortfolioSort('change1h')">1h Change${getSortIndicator('change1h')}<span class="header-info">Hover for details</span></th>
+        <th class="sortable tooltip-header" onclick="handlePortfolioSort('change1d')">1d Change${getSortIndicator('change1d')}<span class="header-info">Hover for details</span></th>
+        <th class="sortable tooltip-header" onclick="handlePortfolioSort('change1w')">1w Change${getSortIndicator('change1w')}<span class="header-info">Hover for details</span></th>
       </tr>
     `;
   }
@@ -395,10 +405,21 @@ function renderPortfolioTable() {
     // Calculate allocation %
     const allocPct = totalExposure > 0 ? (pos.totalExposure / totalExposure) * 100 : 0;
 
-    // 24h change with tooltip
-    const change24h = pos.change24h || 0;
-    const change24hClass = change24h >= 0 ? 'positive' : 'negative';
-    const tooltipContent = build24hTooltip(pos);
+    // Calculate 1h, 1d, 1w changes with details
+    const changes = calculatePositionChanges(pos.conditionId, pos.outcomeIndex);
+
+    // Store changes for sorting
+    pos._change1h = changes.h1;
+    pos._change1d = changes.d1;
+    pos._change1w = changes.w1;
+
+    const h1Class = changes.h1 >= 0 ? 'positive' : 'negative';
+    const d1Class = changes.d1 >= 0 ? 'positive' : 'negative';
+    const w1Class = changes.w1 >= 0 ? 'positive' : 'negative';
+
+    const h1Sign = changes.h1 >= 0 ? '+' : '';
+    const d1Sign = changes.d1 >= 0 ? '+' : '';
+    const w1Sign = changes.w1 >= 0 ? '+' : '';
 
     return `
       <tr>
@@ -415,9 +436,17 @@ function renderPortfolioTable() {
         <td>${traderCountHtml}</td>
         <td>${formatUSD(pos.totalExposure)}</td>
         <td>${allocPct.toFixed(2)}%</td>
-        <td class="tooltip ${change24hClass}">
-          ${change24h >= 0 ? '+' : ''}${formatUSD(change24h)}
-          ${tooltipContent ? `<span class="tooltip-text">${tooltipContent}</span>` : ''}
+        <td class="tooltip ${h1Class}">
+          ${h1Sign}${formatUSD(changes.h1)}
+          ${changes.h1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.h1Details)}</span>` : ''}
+        </td>
+        <td class="tooltip ${d1Class}">
+          ${d1Sign}${formatUSD(changes.d1)}
+          ${changes.d1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.d1Details)}</span>` : ''}
+        </td>
+        <td class="tooltip ${w1Class}">
+          ${w1Sign}${formatUSD(changes.w1)}
+          ${changes.w1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.w1Details)}</span>` : ''}
         </td>
       </tr>
     `;
@@ -900,8 +929,11 @@ async function runChecker(address) {
     // Calculate model portfolio total exposure
     const modelTotalExposure = aggregatedPortfolio?.summary?.totalExposure || 0;
 
+    // Portfolio size = exposure + USDC balance
+    const portfolioSize = totalExposure + usdcBalance;
+
     // Update summary cards
-    document.getElementById('checker-portfolio-size').textContent = formatUSD(portfolioValue);
+    document.getElementById('checker-portfolio-size').textContent = formatUSD(portfolioSize);
     document.getElementById('checker-exposure').textContent = formatUSD(totalExposure);
     document.getElementById('checker-usdc').textContent = formatUSD(usdcBalance);
 
