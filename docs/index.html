@@ -23,6 +23,7 @@
     <button class="tab active" data-section="traders">Traders</button>
     <button class="tab" data-section="portfolio">Portfolio</button>
     <button class="tab" data-section="changes">Recent Changes</button>
+    <button class="tab" data-section="checker">Checker</button>
   </nav>
 
   <main>
@@ -95,6 +96,7 @@
               <th>#</th>
               <th class="sortable">Market</th>
               <th>Side</th>
+              <th class="sortable">Expiration</th>
               <th>Avg Entry</th>
               <th class="sortable">Traders</th>
               <th class="sortable">Exposure</th>
@@ -103,7 +105,7 @@
             </tr>
           </thead>
           <tbody id="portfolio-tbody">
-            <tr><td colspan="8" class="loading">Loading portfolio...</td></tr>
+            <tr><td colspan="9" class="loading">Loading portfolio...</td></tr>
           </tbody>
         </table>
       </div>
@@ -170,6 +172,61 @@
             <tr><td colspan="8" class="loading">Loading changes...</td></tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <!-- Section 4: Checker -->
+    <section id="checker-section" class="section">
+      <div class="section-header">
+        <h2>Portfolio Checker</h2>
+      </div>
+
+      <div class="checker-input-container">
+        <input type="text" id="checker-address" placeholder="Enter Polymarket address (0x...)">
+        <button id="checker-btn" class="btn btn-primary">Check Portfolio</button>
+      </div>
+
+      <div id="checker-results" class="checker-results" style="display: none;">
+        <div class="summary-cards" id="checker-summary">
+          <div class="card">
+            <div class="card-label">Portfolio Size</div>
+            <div class="card-value" id="checker-portfolio-size">$0</div>
+          </div>
+          <div class="card">
+            <div class="card-label">Total Exposure</div>
+            <div class="card-value" id="checker-exposure">$0</div>
+          </div>
+          <div class="card">
+            <div class="card-label">USDC Balance</div>
+            <div class="card-value" id="checker-usdc">$0</div>
+          </div>
+          <div class="card">
+            <div class="card-label">All Time PnL</div>
+            <div class="card-value" id="checker-pnl">$0</div>
+          </div>
+        </div>
+
+        <h3 class="checker-subtitle">Position Comparison with Model Portfolio</h3>
+        <div class="table-container">
+          <table id="checker-table">
+            <thead>
+              <tr>
+                <th>Market</th>
+                <th>Side</th>
+                <th>Your Exposure</th>
+                <th>Your %</th>
+                <th>Model %</th>
+                <th>Tier1 Traders</th>
+                <th class="tooltip-header">1h Change<span class="header-info">Hover for details</span></th>
+                <th class="tooltip-header">1d Change<span class="header-info">Hover for details</span></th>
+                <th class="tooltip-header">1w Change<span class="header-info">Hover for details</span></th>
+              </tr>
+            </thead>
+            <tbody id="checker-tbody">
+              <tr><td colspan="9" class="loading">Enter an address to check</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   </main>

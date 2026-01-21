@@ -68,6 +68,37 @@ function formatRelativeTime(timestamp) {
 }
 
 /**
+ * Format date as "04 Jan 2026"
+ */
+function formatExpirationDate(dateStr) {
+  if (!dateStr) return '-';
+  try {
+    const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return '-';
+    const day = date.getDate().toString().padStart(2, '0');
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
+  } catch {
+    return '-';
+  }
+}
+
+/**
+ * Parse date string to timestamp for sorting
+ */
+function parseExpirationDate(dateStr) {
+  if (!dateStr) return 0;
+  try {
+    const date = new Date(dateStr);
+    return isNaN(date.getTime()) ? 0 : date.getTime();
+  } catch {
+    return 0;
+  }
+}
+
+/**
  * Truncate address
  */
 function truncateAddress(address) {
@@ -214,6 +245,10 @@ function sortPositions(positions) {
         aVal = a.change24h || 0;
         bVal = b.change24h || 0;
         break;
+      case 'endDate':
+        aVal = parseExpirationDate(a.endDate);
+        bVal = parseExpirationDate(b.endDate);
+        break;
       case 'title':
         aVal = a.title || '';
         bVal = b.title || '';
@@ -307,6 +342,7 @@ function renderPortfolioTable() {
         <th>#</th>
         <th class="sortable" onclick="handlePortfolioSort('title')">Market${getSortIndicator('title')}</th>
         <th>Side</th>
+        <th class="sortable" onclick="handlePortfolioSort('endDate')">Expiration${getSortIndicator('endDate')}</th>
         <th>Avg Entry</th>
         <th class="sortable" onclick="handlePortfolioSort('traderCount')">Traders${getSortIndicator('traderCount')}</th>
         <th class="sortable" onclick="handlePortfolioSort('totalExposure')">Exposure${getSortIndicator('totalExposure')}</th>
@@ -374,6 +410,7 @@ function renderPortfolioTable() {
           </div>
         </td>
         <td><span class="${outcomeClass}">${pos.outcome || '-'}</span></td>
+        <td class="expiration-date">${formatExpirationDate(pos.endDate)}</td>
         <td>${entryHtml}</td>
         <td>${traderCountHtml}</td>
         <td>${formatUSD(pos.totalExposure)}</td>
@@ -621,7 +658,358 @@ function init() {
   initFilters();
   initSearch();
   initRefresh();
+  initChecker();
   loadData();
+}
+
+// ============================================
+// CHECKER SECTION
+// ============================================
+
+const POLYGON_RPC = 'https://polygon-rpc.com';
+const USDC_NATIVE = '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359';
+const USDC_BRIDGED = '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174';
+const DATA_API_BASE = 'https://data-api.polymarket.com';
+
+/**
+ * Fetch USDC balance from Polygon blockchain
+ */
+async function fetchUsdcBalance(address) {
+  const addr = address.toLowerCase().replace('0x', '');
+  const data = '0x70a08231000000000000000000000000' + addr;
+
+  async function getBalance(tokenContract) {
+    try {
+      const response = await fetch(POLYGON_RPC, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          jsonrpc: '2.0',
+          method: 'eth_call',
+          params: [{ to: tokenContract, data }, 'latest'],
+          id: 1
+        })
+      });
+      const result = await response.json();
+      if (result.result && result.result !== '0x') {
+        return parseInt(result.result, 16) / 1e6;
+      }
+      return 0;
+    } catch {
+      return 0;
+    }
+  }
+
+  const [nativeBalance, bridgedBalance] = await Promise.all([
+    getBalance(USDC_NATIVE),
+    getBalance(USDC_BRIDGED)
+  ]);
+
+  return Math.round((nativeBalance + bridgedBalance) * 100) / 100;
+}
+
+/**
+ * Fetch positions for a wallet from Polymarket API
+ */
+async function fetchCheckerPositions(address) {
+  const url = `${DATA_API_BASE}/positions?user=${address.toLowerCase()}&limit=1000`;
+  const response = await fetch(url);
+  if (!response.ok) throw new Error('Failed to fetch positions');
+  return await response.json();
+}
+
+/**
+ * Fetch portfolio value for a wallet
+ */
+async function fetchCheckerValue(address) {
+  const url = `${DATA_API_BASE}/value?user=${address.toLowerCase()}`;
+  const response = await fetch(url);
+  if (!response.ok) return 0;
+  const data = await response.json();
+  if (!data || data.length === 0) return 0;
+  return parseFloat(data[0]?.value || 0);
+}
+
+/**
+ * Scrape profile for PnL data
+ */
+async function fetchCheckerPnL(address) {
+  try {
+    const response = await fetch(`https://polymarket.com/profile/${address}`, {
+      headers: {
+        'Accept': 'text/html'
+      }
+    });
+    if (!response.ok) return null;
+    const html = await response.text();
+    const match = html.match(/__NEXT_DATA__[^>]*>({.*?})<\/script>/);
+    if (!match) return null;
+    const data = JSON.parse(match[1]);
+    const queries = data.props?.pageProps?.dehydratedState?.queries || [];
+    for (const q of queries) {
+      const d = q.state?.data;
+      if (d && typeof d.pnl === 'number') {
+        return d.pnl;
+      }
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Calculate time-windowed changes for a position from recent changes data
+ */
+function calculatePositionChanges(conditionId, outcomeIndex) {
+  if (!recentChanges?.changes) return { h1: 0, d1: 0, w1: 0, h1Details: [], d1Details: [], w1Details: [] };
+
+  const now = Date.now() / 1000;
+  const cutoff1h = now - 3600;
+  const cutoff1d = now - 86400;
+  const cutoff1w = now - 7 * 86400;
+
+  let h1 = 0, d1 = 0, w1 = 0;
+  const h1Details = [], d1Details = [], w1Details = [];
+
+  // Group changes by trader for each window
+  const traderChanges1h = new Map();
+  const traderChanges1d = new Map();
+  const traderChanges1w = new Map();
+
+  for (const c of recentChanges.changes) {
+    if (c.conditionId !== conditionId) continue;
+    if (c.outcomeIndex !== outcomeIndex &&
+        !((c.outcome === 'Yes' && outcomeIndex === 1) || (c.outcome === 'No' && outcomeIndex === 0))) continue;
+
+    const ts = c.timestamp || 0;
+    const delta = c.delta || 0;
+
+    if (ts >= cutoff1w) {
+      w1 += delta;
+      const trader = c.trader || c.traderAddress?.slice(0, 10);
+      traderChanges1w.set(trader, (traderChanges1w.get(trader) || 0) + delta);
+    }
+    if (ts >= cutoff1d) {
+      d1 += delta;
+      const trader = c.trader || c.traderAddress?.slice(0, 10);
+      traderChanges1d.set(trader, (traderChanges1d.get(trader) || 0) + delta);
+    }
+    if (ts >= cutoff1h) {
+      h1 += delta;
+      const trader = c.trader || c.traderAddress?.slice(0, 10);
+      traderChanges1h.set(trader, (traderChanges1h.get(trader) || 0) + delta);
+    }
+  }
+
+  // Convert trader maps to sorted arrays
+  for (const [trader, change] of traderChanges1h) {
+    h1Details.push({ trader, change });
+  }
+  for (const [trader, change] of traderChanges1d) {
+    d1Details.push({ trader, change });
+  }
+  for (const [trader, change] of traderChanges1w) {
+    w1Details.push({ trader, change });
+  }
+
+  // Sort by absolute change
+  h1Details.sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
+  d1Details.sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
+  w1Details.sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
+
+  return {
+    h1: Math.round(h1 * 100) / 100,
+    d1: Math.round(d1 * 100) / 100,
+    w1: Math.round(w1 * 100) / 100,
+    h1Details, d1Details, w1Details
+  };
+}
+
+/**
+ * Build tooltip HTML for change details
+ */
+function buildChangeTooltip(details) {
+  if (!details || details.length === 0) return '';
+
+  const lines = details.slice(0, 5).map(d => {
+    const sign = d.change >= 0 ? '+' : '';
+    const cls = d.change >= 0 ? 'positive' : 'negative';
+    return `<span class="${cls}">${d.trader}: ${sign}${formatUSD(d.change)}</span>`;
+  });
+
+  if (details.length > 5) {
+    lines.push(`<span class="muted">+${details.length - 5} more...</span>`);
+  }
+
+  const total = details.reduce((sum, d) => sum + d.change, 0);
+  const totalSign = total >= 0 ? '+' : '';
+  const totalCls = total >= 0 ? 'positive' : 'negative';
+  lines.push(`<hr><span class="${totalCls}"><strong>Total: ${totalSign}${formatUSD(total)}</strong></span>`);
+
+  return lines.join('<br>');
+}
+
+/**
+ * Find model portfolio position info
+ */
+function findModelPosition(conditionId, outcomeIndex) {
+  if (!aggregatedPortfolio?.positions) return null;
+
+  return aggregatedPortfolio.positions.find(p =>
+    p.conditionId === conditionId &&
+    (p.outcomeIndex === outcomeIndex ||
+     (p.outcome === 'Yes' && outcomeIndex === 1) ||
+     (p.outcome === 'No' && outcomeIndex === 0))
+  );
+}
+
+/**
+ * Run the checker for an address
+ */
+async function runChecker(address) {
+  const resultsDiv = document.getElementById('checker-results');
+  const tbody = document.getElementById('checker-tbody');
+
+  if (!address || !address.startsWith('0x') || address.length !== 42) {
+    tbody.innerHTML = '<tr><td colspan="9" class="loading">Please enter a valid Ethereum address (0x...)</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = '<tr><td colspan="9" class="loading">Loading portfolio data...</td></tr>';
+  resultsDiv.style.display = 'block';
+
+  try {
+    // Fetch all data in parallel
+    const [positions, portfolioValue, usdcBalance, pnl] = await Promise.all([
+      fetchCheckerPositions(address),
+      fetchCheckerValue(address),
+      fetchUsdcBalance(address),
+      fetchCheckerPnL(address)
+    ]);
+
+    // Calculate total exposure from positions
+    let totalExposure = 0;
+    for (const pos of positions) {
+      totalExposure += Math.abs(parseFloat(pos.currentValue || 0));
+    }
+
+    // Total capital = exposure + USDC
+    const totalCapital = totalExposure + usdcBalance;
+
+    // Calculate model portfolio total exposure
+    const modelTotalExposure = aggregatedPortfolio?.summary?.totalExposure || 0;
+
+    // Update summary cards
+    document.getElementById('checker-portfolio-size').textContent = formatUSD(portfolioValue);
+    document.getElementById('checker-exposure').textContent = formatUSD(totalExposure);
+    document.getElementById('checker-usdc').textContent = formatUSD(usdcBalance);
+
+    const pnlEl = document.getElementById('checker-pnl');
+    if (pnl !== null) {
+      pnlEl.textContent = (pnl >= 0 ? '+' : '') + formatUSD(pnl);
+      pnlEl.className = 'card-value ' + (pnl >= 0 ? 'positive' : 'negative');
+    } else {
+      pnlEl.textContent = 'N/A';
+      pnlEl.className = 'card-value';
+    }
+
+    if (positions.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="9" class="loading">No positions found for this address</td></tr>';
+      return;
+    }
+
+    // Build positions table
+    const rows = positions.map(pos => {
+      const exposure = Math.abs(parseFloat(pos.currentValue || 0));
+      const userPct = totalCapital > 0 ? (exposure / totalCapital) * 100 : 0;
+
+      // Find matching model position
+      const outcomeIndex = pos.outcomeIndex !== undefined ? pos.outcomeIndex : (pos.outcome === 'Yes' ? 1 : 0);
+      const modelPos = findModelPosition(pos.conditionId, outcomeIndex);
+      const modelPct = modelPos && modelTotalExposure > 0
+        ? (modelPos.totalExposure / modelTotalExposure) * 100
+        : 0;
+
+      // Trader count
+      const traderCount = modelPos?.traderCount || 0;
+      const traderChange = modelPos?.traderCountChange || 0;
+      let traderHtml = `${traderCount}`;
+      if (traderChange !== 0) {
+        const cls = traderChange > 0 ? 'positive' : 'negative';
+        const sign = traderChange > 0 ? '+' : '';
+        traderHtml += ` <span class="${cls}">(${sign}${traderChange})</span>`;
+      }
+
+      // Time-based changes
+      const changes = calculatePositionChanges(pos.conditionId, outcomeIndex);
+
+      const h1Class = changes.h1 >= 0 ? 'positive' : 'negative';
+      const d1Class = changes.d1 >= 0 ? 'positive' : 'negative';
+      const w1Class = changes.w1 >= 0 ? 'positive' : 'negative';
+
+      const h1Sign = changes.h1 >= 0 ? '+' : '';
+      const d1Sign = changes.d1 >= 0 ? '+' : '';
+      const w1Sign = changes.w1 >= 0 ? '+' : '';
+
+      const marketUrl = pos.eventSlug
+        ? polymarketUrl('/event/' + pos.eventSlug)
+        : polymarketUrl('/market/' + pos.slug);
+
+      const outcomeClass = pos.outcome === 'Yes' ? 'outcome-yes' : 'outcome-no';
+
+      return `
+        <tr>
+          <td>
+            <a href="${marketUrl}" target="_blank" class="market-link">${pos.title || 'Unknown Market'}</a>
+          </td>
+          <td><span class="${outcomeClass}">${pos.outcome || '-'}</span></td>
+          <td>${formatUSD(exposure)}</td>
+          <td>${userPct.toFixed(2)}%</td>
+          <td>${modelPct > 0 ? modelPct.toFixed(2) + '%' : '-'}</td>
+          <td>${traderCount > 0 ? traderHtml : '-'}</td>
+          <td class="tooltip ${h1Class}">
+            ${h1Sign}${formatUSD(changes.h1)}
+            ${changes.h1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.h1Details)}</span>` : ''}
+          </td>
+          <td class="tooltip ${d1Class}">
+            ${d1Sign}${formatUSD(changes.d1)}
+            ${changes.d1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.d1Details)}</span>` : ''}
+          </td>
+          <td class="tooltip ${w1Class}">
+            ${w1Sign}${formatUSD(changes.w1)}
+            ${changes.w1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.w1Details)}</span>` : ''}
+          </td>
+        </tr>
+      `;
+    });
+
+    tbody.innerHTML = rows.join('');
+
+  } catch (error) {
+    console.error('Checker error:', error);
+    tbody.innerHTML = `<tr><td colspan="9" class="loading">Error: ${error.message}</td></tr>`;
+  }
+}
+
+/**
+ * Initialize checker section
+ */
+function initChecker() {
+  const btn = document.getElementById('checker-btn');
+  const input = document.getElementById('checker-address');
+
+  btn?.addEventListener('click', () => {
+    const address = input.value.trim();
+    runChecker(address);
+  });
+
+  input?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const address = input.value.trim();
+      runChecker(address);
+    }
+  });
 }
 
 // Start
