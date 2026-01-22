@@ -553,6 +553,39 @@ footer a:hover {
   font-size: 0.85rem;
 }
 
+/* Grouped market rows */
+.market-first-row td {
+  border-top: 1px solid var(--border-color);
+}
+
+.market-continuation-row {
+  background: rgba(88, 166, 255, 0.03);
+}
+
+.market-continuation-row:hover {
+  background: var(--bg-tertiary);
+}
+
+.market-continuation-row td {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.market-index {
+  vertical-align: middle;
+}
+
+/* Cells with rowspan */
+td[rowspan] {
+  vertical-align: middle;
+  border-bottom: none;
+}
+
+.market-first-row + .market-continuation-row td[rowspan] {
+  border-bottom: 1px solid var(--border-color);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header {

@@ -227,6 +227,47 @@ function renderPortfolioSummary() {
 }
 
 /**
+ * Group positions by conditionId to combine YES/NO outcomes
+ */
+function groupPositionsByMarket(positions) {
+  const grouped = new Map();
+
+  for (const pos of positions) {
+    const key = pos.conditionId;
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        conditionId: pos.conditionId,
+        title: pos.title,
+        slug: pos.slug,
+        icon: pos.icon,
+        eventSlug: pos.eventSlug,
+        endDate: pos.endDate,
+        outcomes: []
+      });
+    }
+    grouped.get(key).outcomes.push(pos);
+  }
+
+  // Calculate combined metrics for sorting
+  for (const [key, market] of grouped) {
+    market.totalExposure = market.outcomes.reduce((sum, o) => sum + (o.totalExposure || 0), 0);
+    market.traderCount = market.outcomes.reduce((max, o) => Math.max(max, o.traderCount || 0), 0);
+    market._change1h = market.outcomes.reduce((sum, o) => sum + (o._change1h || 0), 0);
+    market._change1d = market.outcomes.reduce((sum, o) => sum + (o._change1d || 0), 0);
+    market._change1w = market.outcomes.reduce((sum, o) => sum + (o._change1w || 0), 0);
+
+    // Sort outcomes: Yes first, then No
+    market.outcomes.sort((a, b) => {
+      if (a.outcome === 'Yes' && b.outcome !== 'Yes') return -1;
+      if (a.outcome !== 'Yes' && b.outcome === 'Yes') return 1;
+      return 0;
+    });
+  }
+
+  return Array.from(grouped.values());
+}
+
+/**
  * Sort positions for portfolio table
  */
 function sortPositions(positions) {
@@ -332,6 +373,96 @@ function build24hTooltip(pos) {
 }
 
 /**
+ * Render a single outcome row for the portfolio table
+ */
+function renderOutcomeRow(outcome, totalExposure, isFirst, rowSpanCount, marketInfo) {
+  const outcomeClass = outcome.outcome === 'Yes' ? 'outcome-yes' : 'outcome-no';
+
+  // Format entry price with change %
+  let entryHtml = '-';
+  if (outcome.avgEntry > 0) {
+    const changePct = outcome.priceChangePct || 0;
+    const changeClass = changePct >= 0 ? 'positive' : 'negative';
+    const changeSign = changePct >= 0 ? '+' : '';
+    entryHtml = `
+      <div class="entry-price">
+        <span class="entry-main">${formatCents(outcome.avgEntry)}</span>
+        <span class="entry-change ${changeClass}">(${changeSign}${changePct.toFixed(1)}%)</span>
+      </div>
+    `;
+  }
+
+  // Format trader count with change indicator
+  const traderChange = outcome.traderCountChange || 0;
+  let traderCountHtml = `${outcome.traderCount}`;
+  if (traderChange !== 0) {
+    const changeClass = traderChange > 0 ? 'positive' : 'negative';
+    const changeSign = traderChange > 0 ? '+' : '';
+    traderCountHtml = `${outcome.traderCount} <span class="${changeClass}">(${changeSign}${traderChange})</span>`;
+  }
+
+  // Calculate allocation % for this outcome
+  const allocPct = totalExposure > 0 ? (outcome.totalExposure / totalExposure) * 100 : 0;
+
+  // Get changes for this specific outcome
+  const changes = calculatePositionChanges(outcome.conditionId, outcome.outcomeIndex);
+  outcome._change1h = changes.h1;
+  outcome._change1d = changes.d1;
+  outcome._change1w = changes.w1;
+
+  const h1Class = changes.h1 >= 0 ? 'positive' : 'negative';
+  const d1Class = changes.d1 >= 0 ? 'positive' : 'negative';
+  const w1Class = changes.w1 >= 0 ? 'positive' : 'negative';
+
+  const h1Sign = changes.h1 >= 0 ? '+' : '';
+  const d1Sign = changes.d1 >= 0 ? '+' : '';
+  const w1Sign = changes.w1 >= 0 ? '+' : '';
+
+  // Build the row HTML
+  let rowHtml = `<tr class="${isFirst ? 'market-first-row' : 'market-continuation-row'}">`;
+
+  // Only include market info cells on first row (with rowspan for multi-outcome markets)
+  if (isFirst) {
+    const marketUrl = marketInfo.eventSlug
+      ? polymarketUrl('/event/' + marketInfo.eventSlug)
+      : polymarketUrl('/market/' + marketInfo.slug);
+
+    rowHtml += `
+      <td ${rowSpanCount > 1 ? `rowspan="${rowSpanCount}"` : ''} class="market-index">${marketInfo.index}</td>
+      <td ${rowSpanCount > 1 ? `rowspan="${rowSpanCount}"` : ''}>
+        <div class="market-cell">
+          ${marketInfo.icon ? `<img src="${marketInfo.icon}" class="market-icon" alt="">` : '<div class="market-icon"></div>'}
+          <a href="${marketUrl}" target="_blank" class="market-link">${marketInfo.title || 'Unknown Market'}</a>
+        </div>
+      </td>
+    `;
+  }
+
+  rowHtml += `
+    <td><span class="${outcomeClass}">${outcome.outcome || '-'}</span></td>
+    ${isFirst ? `<td ${rowSpanCount > 1 ? `rowspan="${rowSpanCount}"` : ''} class="expiration-date">${formatExpirationDate(marketInfo.endDate)}</td>` : ''}
+    <td>${entryHtml}</td>
+    <td>${traderCountHtml}</td>
+    <td>${formatUSD(outcome.totalExposure)}</td>
+    <td>${allocPct.toFixed(2)}%</td>
+    <td class="tooltip ${h1Class}">
+      ${h1Sign}${formatUSD(changes.h1)}
+      ${changes.h1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.h1Details)}</span>` : ''}
+    </td>
+    <td class="tooltip ${d1Class}">
+      ${d1Sign}${formatUSD(changes.d1)}
+      ${changes.d1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.d1Details)}</span>` : ''}
+    </td>
+    <td class="tooltip ${w1Class}">
+      ${w1Sign}${formatUSD(changes.w1)}
+      ${changes.w1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.w1Details)}</span>` : ''}
+    </td>
+  </tr>`;
+
+  return rowHtml;
+}
+
+/**
  * Render portfolio table
  */
 function renderPortfolioTable() {
@@ -339,7 +470,7 @@ function renderPortfolioTable() {
   const thead = document.getElementById('portfolio-thead');
 
   if (!aggregatedPortfolio?.positions) {
-    tbody.innerHTML = '<tr><td colspan="8" class="loading">Loading...</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="11" class="loading">Loading...</td></tr>';
     return;
   }
 
@@ -362,95 +493,53 @@ function renderPortfolioTable() {
     `;
   }
 
-  const positions = sortPositions(aggregatedPortfolio.positions);
-  if (positions.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="8" class="loading">No positions found</td></tr>';
-    return;
-  }
-
-  // Calculate total exposure for allocation %
-  const totalExposure = aggregatedPortfolio.summary?.totalExposure ||
-    positions.reduce((sum, p) => sum + (p.totalExposure || 0), 0);
-
-  tbody.innerHTML = positions.map((pos, idx) => {
-    const marketUrl = pos.eventSlug
-      ? polymarketUrl('/event/' + pos.eventSlug)
-      : polymarketUrl('/market/' + pos.slug);
-
-    const outcomeClass = pos.outcome === 'Yes' ? 'outcome-yes' : 'outcome-no';
-
-    // Format entry price with change %
-    let entryHtml = '-';
-    if (pos.avgEntry > 0) {
-      const changePct = pos.priceChangePct || 0;
-      const changeClass = changePct >= 0 ? 'positive' : 'negative';
-      const changeSign = changePct >= 0 ? '+' : '';
-      entryHtml = `
-        <div class="entry-price">
-          <span class="entry-main">${formatCents(pos.avgEntry)}</span>
-          <span class="entry-change ${changeClass}">(${changeSign}${changePct.toFixed(1)}%)</span>
-        </div>
-      `;
-    }
-
-    // Format trader count with change indicator
-    const traderChange = pos.traderCountChange || 0;
-    let traderCountHtml = `${pos.traderCount}`;
-    if (traderChange !== 0) {
-      const changeClass = traderChange > 0 ? 'positive' : 'negative';
-      const changeSign = traderChange > 0 ? '+' : '';
-      traderCountHtml = `${pos.traderCount} <span class="${changeClass}">(${changeSign}${traderChange})</span>`;
-    }
-
-    // Calculate allocation %
-    const allocPct = totalExposure > 0 ? (pos.totalExposure / totalExposure) * 100 : 0;
-
-    // Calculate 1h, 1d, 1w changes with details
+  // First calculate changes for all positions (needed for grouping)
+  for (const pos of aggregatedPortfolio.positions) {
     const changes = calculatePositionChanges(pos.conditionId, pos.outcomeIndex);
-
-    // Store changes for sorting
     pos._change1h = changes.h1;
     pos._change1d = changes.d1;
     pos._change1w = changes.w1;
+  }
 
-    const h1Class = changes.h1 >= 0 ? 'positive' : 'negative';
-    const d1Class = changes.d1 >= 0 ? 'positive' : 'negative';
-    const w1Class = changes.w1 >= 0 ? 'positive' : 'negative';
+  // Group positions by market
+  const groupedMarkets = groupPositionsByMarket(aggregatedPortfolio.positions);
 
-    const h1Sign = changes.h1 >= 0 ? '+' : '';
-    const d1Sign = changes.d1 >= 0 ? '+' : '';
-    const w1Sign = changes.w1 >= 0 ? '+' : '';
+  if (groupedMarkets.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="11" class="loading">No positions found</td></tr>';
+    return;
+  }
 
-    return `
-      <tr>
-        <td>${idx + 1}</td>
-        <td>
-          <div class="market-cell">
-            ${pos.icon ? `<img src="${pos.icon}" class="market-icon" alt="">` : '<div class="market-icon"></div>'}
-            <a href="${marketUrl}" target="_blank" class="market-link">${pos.title || 'Unknown Market'}</a>
-          </div>
-        </td>
-        <td><span class="${outcomeClass}">${pos.outcome || '-'}</span></td>
-        <td class="expiration-date">${formatExpirationDate(pos.endDate)}</td>
-        <td>${entryHtml}</td>
-        <td>${traderCountHtml}</td>
-        <td>${formatUSD(pos.totalExposure)}</td>
-        <td>${allocPct.toFixed(2)}%</td>
-        <td class="tooltip ${h1Class}">
-          ${h1Sign}${formatUSD(changes.h1)}
-          ${changes.h1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.h1Details)}</span>` : ''}
-        </td>
-        <td class="tooltip ${d1Class}">
-          ${d1Sign}${formatUSD(changes.d1)}
-          ${changes.d1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.d1Details)}</span>` : ''}
-        </td>
-        <td class="tooltip ${w1Class}">
-          ${w1Sign}${formatUSD(changes.w1)}
-          ${changes.w1Details.length > 0 ? `<span class="tooltip-text">${buildChangeTooltip(changes.w1Details)}</span>` : ''}
-        </td>
-      </tr>
-    `;
-  }).join('');
+  // Sort grouped markets
+  const sortedMarkets = sortPositions(groupedMarkets);
+
+  // Calculate total exposure for allocation %
+  const totalExposure = aggregatedPortfolio.summary?.totalExposure ||
+    sortedMarkets.reduce((sum, m) => sum + (m.totalExposure || 0), 0);
+
+  // Render rows
+  let html = '';
+  sortedMarkets.forEach((market, idx) => {
+    const marketInfo = {
+      index: idx + 1,
+      title: market.title,
+      slug: market.slug,
+      icon: market.icon,
+      eventSlug: market.eventSlug,
+      endDate: market.endDate
+    };
+
+    market.outcomes.forEach((outcome, outcomeIdx) => {
+      html += renderOutcomeRow(
+        outcome,
+        totalExposure,
+        outcomeIdx === 0,
+        market.outcomes.length,
+        marketInfo
+      );
+    });
+  });
+
+  tbody.innerHTML = html;
 }
 
 /**
