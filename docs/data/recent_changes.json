@@ -1,6 +1,81 @@
 {
   "changes": [
     {
+      "timestamp": 1769320742,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Will MrBeast hit 109 billion views by January 31?",
+      "marketSlug": "will-mrbeast-hit-109-billion-views-by-january-31",
+      "eventSlug": "will-mrbeast-hit-billion-views-by-january-31",
+      "conditionId": "0xdc5f34f2566d636bb6dbc0b95d725809a6a64d78639d988a0d86ba1790c7789b",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "decreased",
+      "delta": -4995,
+      "size": 5000,
+      "price": 0.999
+    },
+    {
+      "timestamp": 1769320512,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Will the Iranian regime fall before 2027?",
+      "marketSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "eventSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 0.12,
+      "size": 0.32,
+      "price": 0.37
+    },
+    {
+      "timestamp": 1769320290,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Will the US not strike Iran by January 31, 2026?",
+      "marketSlug": "will-the-us-not-strike-iran-by-january-31-2026-314",
+      "eventSlug": "us-next-strikes-iran-on",
+      "conditionId": "0xaca2f1e173994a7b314a32e13db77fb5cd3b909ba15da5bfd159ba987ce06ff3",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "decreased",
+      "delta": -100,
+      "size": 126.582277,
+      "price": 0.7899999934429999
+    },
+    {
+      "timestamp": 1769320250,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Will the US not strike Iran by January 31, 2026?",
+      "marketSlug": "will-the-us-not-strike-iran-by-january-31-2026-314",
+      "eventSlug": "us-next-strikes-iran-on",
+      "conditionId": "0xaca2f1e173994a7b314a32e13db77fb5cd3b909ba15da5bfd159ba987ce06ff3",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "decreased",
+      "delta": -108,
+      "size": 136.708859,
+      "price": 0.7899999955379629
+    },
+    {
+      "timestamp": 1769320132,
+      "trader": "ArmageddonRewardsBilly",
+      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
+      "market": "Will the Iranian regime fall before 2027?",
+      "marketSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "eventSlug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+      "conditionId": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 0.19,
+      "size": 0.5,
+      "price": 0.37
+    },
+    {
       "timestamp": 1769319982,
       "trader": "ArmageddonRewardsBilly",
       "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
@@ -5447,21 +5522,6 @@
     },
     {
       "timestamp": 1769309800,
-      "trader": "archaic",
-      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
-      "market": "Will Khamenei leave Iran by Jan 31?",
-      "marketSlug": "will-khamenei-leave-iran-by-jan-31-322",
-      "eventSlug": "will-khamenei-leave-iran-by-friday",
-      "conditionId": "0x277f21a0a26b1a2ec9c4980f91f55708880a7cd4c5ab68687fad0c2f6efba698",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 6.7,
-      "size": 6.9,
-      "price": 0.971
-    },
-    {
-      "timestamp": 1769309800,
       "trader": "kekkone",
       "traderAddress": "0x39d0f1dca6fb7e5514858c1a337724a426764fe8",
       "market": "Israel strikes Iran by March 31, 2026?",
@@ -5474,6 +5534,21 @@
       "delta": 96,
       "size": 200,
       "price": 0.48
+    },
+    {
+      "timestamp": 1769309800,
+      "trader": "archaic",
+      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
+      "market": "Will Khamenei leave Iran by Jan 31?",
+      "marketSlug": "will-khamenei-leave-iran-by-jan-31-322",
+      "eventSlug": "will-khamenei-leave-iran-by-friday",
+      "conditionId": "0x277f21a0a26b1a2ec9c4980f91f55708880a7cd4c5ab68687fad0c2f6efba698",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 6.7,
+      "size": 6.9,
+      "price": 0.971
     },
     {
       "timestamp": 1769309798,
@@ -16531,36 +16606,6 @@
       "price": 0.933
     },
     {
-      "timestamp": 1769303274,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Will Alex Honnold free solo Taipei 101 in between 2 hours and 2 hours and 15 minutes?",
-      "marketSlug": "will-alex-honnold-free-solo-taipei-101-in-between-2-hours-and-2-hours-and-15-minutes-638-582",
-      "eventSlug": "how-long-will-it-take-alex-honnold-to-free-solo-taipei-101",
-      "conditionId": "0x9d126ca2404a3bc1624f53eb4fc9fd7b0cd41c144a60b26b5a48a0f134b17a57",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 2.52,
-      "size": 20,
-      "price": 0.126
-    },
-    {
-      "timestamp": 1769303272,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Will Alex Honnold free solo Taipei 101 in less than 1 hour?",
-      "marketSlug": "will-alex-honnold-free-solo-taipei-101-in-less-than-1-hour",
-      "eventSlug": "how-long-will-it-take-alex-honnold-to-free-solo-taipei-101",
-      "conditionId": "0xcc76036978af3bcd4453b2f8757e9fe00a197757c08dc1f22b2d9f638a799ce6",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 2.32,
-      "size": 2.428603,
-      "price": 0.957000382524439
-    },
-    {
       "timestamp": 1769303270,
       "trader": "dontshowmyname",
       "traderAddress": "0x0c97325a81ad05c6b58ae30d12eaaec1b8451b68",
@@ -16574,51 +16619,6 @@
       "delta": 5.95,
       "size": 15.67,
       "price": 0.38
-    },
-    {
-      "timestamp": 1769303264,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Will Alex Honnold not complete a free solo of Taipei 101 by January 31?",
-      "marketSlug": "will-alex-honnold-not-complete-a-free-solo-of-taipei-101-by-january-31",
-      "eventSlug": "how-long-will-it-take-alex-honnold-to-free-solo-taipei-101",
-      "conditionId": "0x9239b612b3aca7b454198832d949e722a9da03527448b82d2b76acdc97b191d8",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 78.15,
-      "size": 81.49,
-      "price": 0.959
-    },
-    {
-      "timestamp": 1769303246,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Will Diosdado Cabello Rondón be the leader of Venezuela end of 2026?",
-      "marketSlug": "will-diosdado-cabello-rondn-be-the-leader-of-venezuela-end-of-2026",
-      "eventSlug": "venezuela-leader-end-of-2026",
-      "conditionId": "0xd46931250308613b38c1fdad5cfeaeaae05818bc445668ad4629f12e92aac690",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "decreased",
-      "delta": -1.44,
-      "size": 49.57,
-      "price": 0.029
-    },
-    {
-      "timestamp": 1769303222,
-      "trader": "ArmageddonRewardsBilly",
-      "traderAddress": "0xc8ab97a9089a9ff7e6ef0688e6e591a066946418",
-      "market": "Will Alex Honnold not complete a free solo of Taipei 101 by January 31?",
-      "marketSlug": "will-alex-honnold-not-complete-a-free-solo-of-taipei-101-by-january-31",
-      "eventSlug": "how-long-will-it-take-alex-honnold-to-free-solo-taipei-101",
-      "conditionId": "0x9239b612b3aca7b454198832d949e722a9da03527448b82d2b76acdc97b191d8",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 113.65,
-      "size": 118.507316,
-      "price": 0.9590000080670125
     },
     {
       "timestamp": 1769303202,
@@ -19217,6 +19217,21 @@
     },
     {
       "timestamp": 1769299240,
+      "trader": "JJo",
+      "traderAddress": "0xc4086b708cd3a50880b7069add1a1a80000f4675",
+      "market": "Will the Iranian regime fall by January 31?",
+      "marketSlug": "will-the-iranian-regime-fall-by-january-31",
+      "eventSlug": "will-the-iranian-regime-fall-by-january-31",
+      "conditionId": "0x77b9b065f487d1e18d005465d221ec6c84ed3babfaf6ecf62f20baeaa9fc3038",
+      "outcome": "No",
+      "outcomeIndex": 1,
+      "action": "increased",
+      "delta": 9620,
+      "size": 10000,
+      "price": 0.962
+    },
+    {
+      "timestamp": 1769299240,
       "trader": "archaic",
       "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
       "market": "Will the Iranian regime fall by January 31?",
@@ -19259,21 +19274,6 @@
       "delta": 587.84,
       "size": 607.27,
       "price": 0.968
-    },
-    {
-      "timestamp": 1769299240,
-      "trader": "JJo",
-      "traderAddress": "0xc4086b708cd3a50880b7069add1a1a80000f4675",
-      "market": "Will the Iranian regime fall by January 31?",
-      "marketSlug": "will-the-iranian-regime-fall-by-january-31",
-      "eventSlug": "will-the-iranian-regime-fall-by-january-31",
-      "conditionId": "0x77b9b065f487d1e18d005465d221ec6c84ed3babfaf6ecf62f20baeaa9fc3038",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 9620,
-      "size": 10000,
-      "price": 0.962
     },
     {
       "timestamp": 1769299214,
@@ -19787,21 +19787,6 @@
     },
     {
       "timestamp": 1769298808,
-      "trader": "archaic",
-      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
-      "market": "Nothing Ever Happens: Khamenei",
-      "marketSlug": "nothing-ever-happens-khamenei",
-      "eventSlug": "nothing-ever-happens-khamenei",
-      "conditionId": "0x569d909807a5d032aac3cbb3971c503f72552bb49378636fc2812820158c7a64",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "decreased",
-      "delta": -138.89,
-      "size": 195.62,
-      "price": 0.71
-    },
-    {
-      "timestamp": 1769298808,
       "trader": "0xheavy888",
       "traderAddress": "0xec981ed70ae69c5cbcac08c1ba063e734f6bafcd",
       "market": "LoL: Sentinels vs Disguised - Game 1 Winner",
@@ -19829,6 +19814,21 @@
       "delta": 11.04,
       "size": 23,
       "price": 0.48
+    },
+    {
+      "timestamp": 1769298808,
+      "trader": "archaic",
+      "traderAddress": "0x1f0a343513aa6060488fabe96960e6d1e177f7aa",
+      "market": "Nothing Ever Happens: Khamenei",
+      "marketSlug": "nothing-ever-happens-khamenei",
+      "eventSlug": "nothing-ever-happens-khamenei",
+      "conditionId": "0x569d909807a5d032aac3cbb3971c503f72552bb49378636fc2812820158c7a64",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "decreased",
+      "delta": -138.89,
+      "size": 195.62,
+      "price": 0.71
     },
     {
       "timestamp": 1769298806,
@@ -21452,21 +21452,6 @@
     },
     {
       "timestamp": 1769294414,
-      "trader": "Dropper",
-      "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
-      "market": "Khamenei out as Supreme Leader of Iran by January 31?",
-      "marketSlug": "khamenei-out-as-supreme-leader-of-iran-by-january-31",
-      "eventSlug": "khamenei-out-as-supreme-leader-of-iran-by-january-31",
-      "conditionId": "0xa8b744720006da3c08b4dc8a61a5ce930542f550fcf8d27380ae898de636799d",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "increased",
-      "delta": 0.04,
-      "size": 1.04165,
-      "price": 0.04
-    },
-    {
-      "timestamp": 1769294414,
       "trader": "0xheavy888",
       "traderAddress": "0xec981ed70ae69c5cbcac08c1ba063e734f6bafcd",
       "market": "Valorant: KRÜ Esports vs Team Envy (BO3) - VCT Americas Kickoff Playoffs",
@@ -21479,6 +21464,21 @@
       "delta": 100,
       "size": 200,
       "price": 0.5
+    },
+    {
+      "timestamp": 1769294414,
+      "trader": "Dropper",
+      "traderAddress": "0x6bab41a0dc40d6dd4c1a915b8c01969479fd1292",
+      "market": "Khamenei out as Supreme Leader of Iran by January 31?",
+      "marketSlug": "khamenei-out-as-supreme-leader-of-iran-by-january-31",
+      "eventSlug": "khamenei-out-as-supreme-leader-of-iran-by-january-31",
+      "conditionId": "0xa8b744720006da3c08b4dc8a61a5ce930542f550fcf8d27380ae898de636799d",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "increased",
+      "delta": 0.04,
+      "size": 1.04165,
+      "price": 0.04
     },
     {
       "timestamp": 1769294342,
@@ -27047,21 +27047,6 @@
     },
     {
       "timestamp": 1769284892,
-      "trader": "TheWolfOfPoly",
-      "traderAddress": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
-      "market": "Will there be another US government shutdown by January 31?",
-      "marketSlug": "will-there-be-another-us-government-shutdown-by-january-31",
-      "eventSlug": "will-there-be-another-us-government-shutdown-by-january-31",
-      "conditionId": "0x43ec78527bd98a0588dd9455685b2cc82f5743140cb3a154603dc03c02b57de5",
-      "outcome": "Yes",
-      "outcomeIndex": 0,
-      "action": "decreased",
-      "delta": -356.41,
-      "size": 625.28,
-      "price": 0.57
-    },
-    {
-      "timestamp": 1769284892,
       "trader": "0xheavy888",
       "traderAddress": "0xec981ed70ae69c5cbcac08c1ba063e734f6bafcd",
       "market": "LoL: Fluxo W7M vs paiN Gaming (BO1) - CBLOL Cup Regular Season",
@@ -27074,6 +27059,21 @@
       "delta": 397.5,
       "size": 750,
       "price": 0.53
+    },
+    {
+      "timestamp": 1769284892,
+      "trader": "TheWolfOfPoly",
+      "traderAddress": "0x1c1e841584db14084e10e7dca2ad0ab7b60dbfe7",
+      "market": "Will there be another US government shutdown by January 31?",
+      "marketSlug": "will-there-be-another-us-government-shutdown-by-january-31",
+      "eventSlug": "will-there-be-another-us-government-shutdown-by-january-31",
+      "conditionId": "0x43ec78527bd98a0588dd9455685b2cc82f5743140cb3a154603dc03c02b57de5",
+      "outcome": "Yes",
+      "outcomeIndex": 0,
+      "action": "decreased",
+      "delta": -356.41,
+      "size": 625.28,
+      "price": 0.57
     },
     {
       "timestamp": 1769284886,
@@ -28154,28 +28154,13 @@
       "delta": -6,
       "size": 10,
       "price": 0.6
-    },
-    {
-      "timestamp": 1769283244,
-      "trader": "bobe2",
-      "traderAddress": "0xed107a85a4585a381e48c7f7ca4144909e7dd2e5",
-      "market": "Will Trump say \"Million\" or \"Billion\" or \"Trillion\" 10+ times during CNBC interview?",
-      "marketSlug": "will-trump-say-million-or-billion-or-trillion-10-times-during-cnbc-interview",
-      "eventSlug": "what-will-trump-say-during-cnbc-interview",
-      "conditionId": "0xe867ba2fa5fe6b2a6353eea0cd9398a9d03a9a952fbe274d5048db8789498cae",
-      "outcome": "No",
-      "outcomeIndex": 1,
-      "action": "increased",
-      "delta": 999,
-      "size": 1000,
-      "price": 0.999
     }
   ],
   "windowSummaries": {
-    "1h": 12825.78,
-    "6h": 279394.49,
-    "24h": 572827.76,
-    "7d": 572827.76,
-    "30d": 572827.76
+    "1h": 1923.64,
+    "6h": 267992.35,
+    "24h": 566430.86,
+    "7d": 566430.86,
+    "30d": 566430.86
   }
 }
